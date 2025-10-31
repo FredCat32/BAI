@@ -1,0 +1,137 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-black);
+  border-bottom: 2px solid var(--color-red);
+  z-index: 1000;
+  height: 80px;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  max-width: 200px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-white);
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.nav {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background-color: var(--color-gray);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  border-bottom: 2px solid var(--color-red);
+}
+
+.nav-open {
+  transform: translateY(0);
+}
+
+.nav-list {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.nav-list li {
+  margin-bottom: 15px;
+}
+
+.nav-list a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 10px 0;
+}
+
+.nav-list a:hover {
+  color: var(--color-red);
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    transform: none;
+    background: transparent;
+    border: none;
+  }
+
+  .nav-list {
+    display: flex;
+    padding: 0;
+    gap: 30px;
+  }
+
+  .nav-list li {
+    margin-bottom: 0;
+  }
+
+  .nav-list a {
+    font-size: 1rem;
+    padding: 0;
+  }
+}
