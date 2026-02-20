@@ -38,7 +38,7 @@ function About() {
             <div className="founder-image">
               <img 
                 src="/about-image.jpg" 
-                alt="BerksAI Founder" 
+                alt="Matthew Irving - AI Consultant and Founder of BerksAI in Berks County Pennsylvania" 
                 className="founder-photo"
               />
             </div>

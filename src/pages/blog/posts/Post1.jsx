@@ -250,7 +250,8 @@ function Post1() {
         <div className="blog-post-cta">
           <h3>Ready to Explore AI for Your Business?</h3>
           <p>
-            Schedule a free consultation to discuss which AI solutions make sense for your business. 
+            Learn more about our <Link to="/">AI automation services</Link> or schedule a 
+            free consultation to discuss which AI solutions make sense for your business. 
             No sales pitch—just an honest conversation about what's possible.
           </p>
           <Link 

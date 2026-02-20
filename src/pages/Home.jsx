@@ -109,6 +109,98 @@ function Home() {
   </div>
 </section>
 
+      <section className="blog-highlight">
+        <div className="container">
+          <div className="blog-cta">
+            <h2>Latest from the BerksAI Blog</h2>
+            <p>
+              Practical AI insights and automation tips for Pennsylvania businesses
+            </p>
+            <div className="featured-post">
+              <h3>
+                <Link to="/blog/5-ways-pennsylvania-businesses-can-use-ai">
+                  5 Ways Pennsylvania Businesses Can Start Using AI Today
+                </Link>
+              </h3>
+              <p>
+                From automated customer service to email management, discover practical AI 
+                applications for local businesses in Berks County and beyond. No technical 
+                expertise required.
+              </p>
+              <Link to="/blog" className="blog-link">
+                Read More Articles →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="faq-section">
+        <div className="container">
+          <h2>Frequently Asked Questions</h2>
+          <div className="faq-grid">
+            <div className="faq-item">
+              <h3>What areas does BerksAI serve?</h3>
+              <p>
+                We're based in Oley, PA and primarily serve Berks County, Reading, and 
+                surrounding Pennsylvania areas including Lancaster, Lehigh, Chester, and 
+                Montgomery counties. We also work with clients remotely throughout Pennsylvania 
+                and beyond.
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>How much does AI automation cost?</h3>
+              <p>
+                Project costs vary based on complexity. A basic AI chatbot starts around 
+                $2,500-5,000, workflow automation systems range from $5,000-15,000, and 
+                custom enterprise solutions start at $15,000+. We offer free consultations 
+                to provide accurate quotes based on your specific needs.
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>How long does implementation take?</h3>
+              <p>
+                Most projects take 2-6 weeks from initial consultation to launch. Simple 
+                chatbot implementations can be completed in 2-3 weeks, while complex workflow 
+                automation or custom AI systems may take 4-8 weeks. We provide detailed 
+                timelines during the consultation phase.
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Do I need technical knowledge to use AI?</h3>
+              <p>
+                Not at all. We handle all the technical implementation and provide complete 
+                training for your team. Our solutions are designed to be user-friendly and 
+                integrate seamlessly with your existing tools. We also provide ongoing support 
+                to ensure everything runs smoothly.
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>What types of businesses can benefit from AI?</h3>
+              <p>
+                Any business with repetitive workflows can benefit. We've helped HVAC companies, 
+                contractors, professional services, retail businesses, healthcare providers, and 
+                more. If you're spending time on manual tasks like customer service, email 
+                management, scheduling, or data entry, AI can help.
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>How do I get started?</h3>
+              <p>
+                Book a free consultation call at 267-357-8007 or through our contact form. 
+                We'll discuss your business challenges, identify automation opportunities, 
+                and provide a customized roadmap with cost estimates. No commitment required.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="footer-highlights">
         <div className="container">
       

@@ -18,7 +18,7 @@ function Header() {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo" onClick={handleNavClick}>
-          <img src="/logo.png" alt="BerksAI" className="logo-image" />
+          <img src="/logo.png" alt="BerksAI - AI Automation and Consulting Services in Berks County Pennsylvania" className="logo-image" />
         </Link>
         
         <button 
