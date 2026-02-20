@@ -1,0 +1,5 @@
+# robots.txt for berksai.com
+User-agent: *
+Allow: /
+
+Sitemap: https://berksai.com/sitemap.xml
