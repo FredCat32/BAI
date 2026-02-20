@@ -49,6 +49,11 @@ function Header() {
               </Link>
             </li>
             <li>
+              <Link to="/blog" onClick={handleNavClick}>
+                Blog
+              </Link>
+            </li>
+            <li>
               <Link to="/contact" onClick={handleNavClick}>
                 Contact Us
               </Link>

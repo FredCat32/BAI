@@ -4,6 +4,8 @@ import Home from './pages/Home'
 import Contact from './pages/Contact'
 import About from './pages/About'
 import Tech from './pages/Tech'
+import Blog from './pages/blog/Blog'
+import BlogPost from './pages/blog/BlogPost'
 import './App.css'
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/tech" element={<Tech />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:postId" element={<BlogPost />} />
           </Routes>
         </main>
       </div>
