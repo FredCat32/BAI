@@ -3,6 +3,13 @@ import './Blog.css'
 
 const blogPosts = [
   {
+    id: 'what-i-learned-helping-pennsylvania-businesses-implement-ai',
+    title: 'What I Learned Helping Pennsylvania Businesses Implement AI',
+    date: 'February 20, 2026',
+    excerpt: 'Real insights from working with local Berks County businesses—what actually works, what doesn\'t, and what you should know before spending a dime on AI.',
+    readTime: '7 min read'
+  },
+  {
     id: '5-ways-pennsylvania-businesses-can-use-ai',
     title: '5 Ways Pennsylvania Businesses Can Start Using AI Today',
     date: 'February 20, 2026',

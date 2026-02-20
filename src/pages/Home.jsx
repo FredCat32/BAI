@@ -118,14 +118,14 @@ function Home() {
             </p>
             <div className="featured-post">
               <h3>
-                <Link to="/blog/5-ways-pennsylvania-businesses-can-use-ai">
-                  5 Ways Pennsylvania Businesses Can Start Using AI Today
+                <Link to="/blog/what-i-learned-helping-pennsylvania-businesses-implement-ai">
+                  What I Learned Helping Pennsylvania Businesses Implement AI
                 </Link>
               </h3>
               <p>
-                From automated customer service to email management, discover practical AI 
-                applications for local businesses in Berks County and beyond. No technical 
-                expertise required.
+                Real insights from working with local Berks County businesses—what actually works, 
+                what doesn't, and what you should know before spending a dime on AI. Honest talk 
+                about costs, timelines, and ROI.
               </p>
               <Link to="/blog" className="blog-link">
                 Read More Articles →
