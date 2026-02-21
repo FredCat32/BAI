@@ -29,7 +29,7 @@ function Home() {
 
       <section className="services">
         <div className="container">
-          <h2>Services</h2>
+          <h2>AI Automation Services for Pennsylvania Businesses</h2>
           <h3 className="section-intro hero-content">
             We build custom AI and automation systems designed around your business—
             from simple workflows to advanced AI agents.
