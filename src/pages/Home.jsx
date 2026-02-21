@@ -9,8 +9,8 @@ function Home() {
           <div className="hero-content">
             <h1>AI Automation & Consulting for Berks County Businesses</h1>
             <p>
-              We help Berks County and Pennsylvania businesses automate repetitive workflows—client intake, 
-              follow-ups, scheduling, and more—using custom AI solutions that save time and money.
+              We help Berks County and Pennsylvania businesses automate repetitive workflows using AI—client intake, 
+              follow-ups, scheduling, and more—with custom AI solutions that save time and money.
             </p>
             <p className="local-badge">
               📍 Based in Oley, PA • Serving Berks County, Reading, King of Prussia, Philadelphia & Beyond
