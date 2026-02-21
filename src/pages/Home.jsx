@@ -9,11 +9,11 @@ function Home() {
           <div className="hero-content">
             <h1>AI Automation & Consulting for Berks County Businesses</h1>
             <p>
-              We help Pennsylvania businesses automate repetitive workflows—client intake, 
+              We help Berks County and Pennsylvania businesses automate repetitive workflows—client intake, 
               follow-ups, scheduling, and more—using custom AI solutions that save time and money.
             </p>
             <p className="local-badge">
-              📍 Based in Oley, PA • Serving Reading & Berks County
+              📍 Based in Oley, PA • Serving Berks County, Reading, King of Prussia, Philadelphia & Beyond
             </p>
             <Link 
               to="https://forms.berksai.com/forms/QLA1OKsAhBwX5HWGyJap0" 
@@ -142,9 +142,10 @@ function Home() {
             <div className="faq-item">
               <h3>What areas does BerksAI serve?</h3>
               <p>
-                We're based in Oley, PA and primarily serve Berks County, Reading, and 
-                surrounding Pennsylvania areas including Lancaster, Lehigh, Chester, and 
-                Montgomery counties. We also work with clients remotely throughout Pennsylvania 
+                We're based in Oley, PA and serve Berks County (Reading, Wyomissing, Oley), 
+                Montgomery County (King of Prussia, Norristown), Philadelphia and the Main Line 
+                suburbs, as well as Lancaster, Lehigh, Chester, and Delaware counties. We work 
+                with businesses throughout Eastern Pennsylvania and remotely across the state 
                 and beyond.
               </p>
             </div>

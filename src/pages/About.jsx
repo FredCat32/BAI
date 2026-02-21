@@ -59,13 +59,14 @@ function About() {
             <h2>Our Story</h2>
             <p>
               While building AI products, I realized that I could contribute to advancing 
-              Berks County by implementing AI in local businesses. Many small companies 
-              could benefit greatly from these technologies, but they don't know where to 
-              begin—that's where I come in.
+              Berks County and Eastern Pennsylvania by implementing AI in local businesses. 
+              Many small companies in Berks County, King of Prussia, Philadelphia, and throughout 
+              the region could benefit greatly from these technologies, but they don't know where 
+              to begin—that's where I come in.
             </p>
             <p>
-              Seeing this opportunity in the market and realizing I can help local companies, 
-              BerksAI was born.
+              Seeing this opportunity in the market and realizing I can help local companies 
+              across Berks County and the broader Pennsylvania region, BerksAI was born.
             </p>
           </div>
 
