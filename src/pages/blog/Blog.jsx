@@ -3,6 +3,13 @@ import './Blog.css'
 
 const blogPosts = [
   {
+    id: 'ai-tools-i-actually-use-every-day',
+    title: 'AI Tools I Actually Use Every Day (Personal Recommendations)',
+    date: 'February 24, 2026',
+    excerpt: 'An honest look at the AI tools I use daily to run my business—what they cost, how I use them, and whether they\'re worth it for Berks County businesses.',
+    readTime: '5 min read'
+  },
+  {
     id: 'what-i-learned-helping-pennsylvania-businesses-implement-ai',
     title: 'What I Learned Helping Pennsylvania Businesses Implement AI',
     date: 'February 20, 2026',
