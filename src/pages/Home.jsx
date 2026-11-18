@@ -76,24 +76,35 @@ function Home() {
       <section className="feature alt">
         <div className="container feature-grid">
           <div>
-            <h2>An honest look before you spend</h2>
+            <h2>We measure it, so nobody is guessing</h2>
             <p className="lead">
-              Sometimes the right answer is a better prompt, a different tool, or no AI
-              at all. We'll tell you which.
+              Before we train anyone, we look at how your team works today. Afterward,
+              we check again. You see what changed and what didn't. Sometimes the right
+              answer is a better prompt, a different tool, or no AI at all, and we'll
+              say so.
             </p>
           </div>
           <ul className="check-list">
             <li>
-              <strong>Review of what you're paying for.</strong> Which tools your team
-              uses, which they don't, and why.
+              <strong>A look at what's in use today.</strong> Which AI tools your team has,
+              who uses them, what for, and which ones are going unused.
             </li>
             <li>
-              <strong>Plain-language recommendations.</strong> Costs, tradeoffs, and a
-              realistic timeline before anything gets built.
+              <strong>A baseline on real tasks.</strong> We time a few routine tasks and
+              note how much rework they need, so there's something to compare against.
             </li>
             <li>
-              <strong>Small pilots first.</strong> Prove it works on one process before
-              committing to more.
+              <strong>Training on those same tasks.</strong> Hands-on, built around your
+              own emails, documents, and procedures.
+            </li>
+            <li>
+              <strong>A follow-up measurement.</strong> Time, rework, and quality on the
+              same tasks, plus how often the tools are actually used, in a short written
+              summary.
+            </li>
+            <li>
+              <strong>A clear next step.</strong> More training, a different tool, or
+              nothing further. If something didn't help, we'll tell you to drop it.
             </li>
           </ul>
         </div>
@@ -258,6 +269,15 @@ function Home() {
                 Any business where people spend time on writing, customer
                 communication, scheduling, or data entry. A free consultation will tell
                 you quickly whether AI is a good fit.
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>How do you measure results?</h3>
+              <p>
+                We time a few routine tasks before training and again afterward, and track
+                rework, quality, and how often the tools get used. Results depend on your
+                work, and we'll share what we find even when the improvement is small.
               </p>
             </div>
 

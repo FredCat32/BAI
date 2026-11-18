@@ -17,6 +17,7 @@ Tools the business trains on and supports: Microsoft Copilot, ChatGPT, Claude an
 - Do not invent statistics, client results, testimonials, or client types. The business is new; the blog post "Why I'm Starting an AI Consulting Business in Berks County" says so. Anything quantitative must have a real source.
 - n8n and Activepieces are retired. Do not reference them.
 - Pricing is not published on the site.
+- Engagements are described as a process, not a package: look at current AI use, baseline a few real tasks, train on those tasks, re-measure, recommend a next step. Do not promise specific results, savings, or timelines.
 
 ## Development Commands
 
