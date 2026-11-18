@@ -1,56 +1,58 @@
 import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import './About.css'
 
 function About() {
   return (
     <div className="about-page">
       <Helmet>
-        <title>About BerksAI | AI Consultant Matthew Irving | Oley, PA</title>
+        <title>About BerksAI | AI Trainer Matthew Irving | Oley, PA</title>
         <meta
           name="description"
-          content="Meet Matthew Irving, founder of BerksAI. Expert in React, Python, and AI automation serving Berks County businesses. Based in Oley, PA."
+          content="Meet Matthew Irving, founder of BerksAI. On-site AI prompt training and consulting for Berks County businesses, with before-and-after measurement. Based in Oley, PA."
         />
         <link rel="canonical" href="https://berksai.com/about" />
-        <meta property="og:title" content="About BerksAI | AI Consultant Matthew Irving" />
-        <meta property="og:description" content="Meet Matthew Irving, founder of BerksAI. Expert in React, Python, and AI automation serving Berks County businesses." />
+        <meta property="og:title" content="About BerksAI | AI Trainer Matthew Irving" />
+        <meta property="og:description" content="Meet Matthew Irving, founder of BerksAI. On-site AI prompt training and consulting for Berks County businesses." />
         <meta property="og:url" content="https://berksai.com/about" />
       </Helmet>
       <div className="container">
         <div className="about-header">
           <h1>About BerksAI</h1>
-          <p>Empowering local businesses with cutting-edge AI solutions</p>
+          <p>Practical AI training and consulting for local businesses</p>
         </div>
 
         <div className="founder-section">
           <h2>Meet the Founder - Matthew Irving</h2>
           <div className="founder-content">
             <div className="founder-text">
-              <h3>AI Technical Expertise</h3>
+              <h3>Background</h3>
               <p>
-                With a robust technical foundation spanning React, JavaScript, Python, C#, and 
-                Langchain, I specialize in developing production-ready AI solutions that deliver 
-                measurable business results. My expertise extends from front-end interfaces to 
-                backend AI orchestration.
+                I'm a software developer who works with React, JavaScript, Python, C#, and
+                Langchain. I've spent years building AI systems, including chatbots, email
+                agents, and multi-step workflows.
               </p>
               <p>
-                I've architected and deployed sophisticated AI systems including intelligent chatbots 
-                for customer service automation, AI-powered email agents that handle complex business 
-                communications, and multi-step agentic workflows that streamline entire business 
-                processes. These implementations have consistently reduced operational costs while 
-                improving customer satisfaction and response times.
+                That background is why I focus on training and measurement. I know how
+                these tools work and where they fall short, so I can teach your team to
+                use them well and check whether they're actually helping.
               </p>
               <p>
-                My approach combines cutting-edge AI technology with practical business applications, 
-                ensuring every solution integrates seamlessly with existing systems and delivers 
-                immediate ROI. From natural language processing to automated decision-making workflows, 
-                I bring enterprise-grade AI capabilities to businesses ready to embrace the future.
+                BerksAI is new. I don't have a portfolio of case studies yet, and I'd
+                rather say so than make one up. What I can offer is hands-on work, honest
+                advice, and a way to measure whether it paid off. You can read the longer
+                version in{' '}
+                <Link to="/blog/why-im-starting-an-ai-consulting-business-in-berks-county">
+                  Why I'm Starting an AI Consulting Business in Berks County
+                </Link>
+                .
               </p>
             </div>
-            
+
             <div className="founder-image">
-              <img 
-                src="/headshot.webp" 
-                alt="Matthew Irving - AI Consultant and Founder of BerksAI in Berks County Pennsylvania" 
+              <img
+                src="/headshot.webp"
+                alt="Matthew Irving, founder of BerksAI"
                 width="1318"
                 height="1098"
                 loading="lazy"
@@ -64,41 +66,40 @@ function About() {
           <div className="about-section">
             <h2>Our Mission</h2>
             <p>
-              At BerksAI, we believe that artificial intelligence shouldn't be exclusive to 
-              large corporations. Our mission is to democratize AI technology and make it 
-              accessible, practical, and profitable for local businesses of all sizes.
+              AI shouldn't only benefit large corporations. Our mission is to help local
+              businesses get real value from the AI tools they already pay for, use them
+              safely, and know when AI isn't worth the money.
             </p>
           </div>
 
           <div className="about-section">
             <h2>Our Story</h2>
             <p>
-              While building AI products, I realized that I could contribute to advancing 
-              Berks County and Eastern Pennsylvania by implementing AI in local businesses. 
-              Many small companies in Berks County, King of Prussia, Philadelphia, and throughout 
-              the region could benefit greatly from these technologies, but they don't know where 
-              to begin—that's where I come in.
-            </p>
-            <p>
-              Seeing this opportunity in the market and realizing I can help local companies 
-              across Berks County and the broader Pennsylvania region, BerksAI was born.
+              While building AI products, I realized I could contribute to Berks County
+              and Eastern Pennsylvania by helping local businesses use AI well. Many small
+              companies in Berks County, King of Prussia, Philadelphia, and across the
+              region could benefit from these tools but don't know where to begin. Helping
+              them learn to use AI, and check that it's working, is what BerksAI is for.
             </p>
           </div>
 
           <div className="about-section">
-            <h2>What We Do</h2>
+            <h2>How We Work</h2>
             <p>
-              I've seen firsthand how AI can transform operations: chatbots that handle 
-              customer inquiries 24/7, email agents that automatically sort and respond 
-              to communications, and automated workflows that eliminate repetitive tasks. 
-              These aren't futuristic concepts—they're practical solutions working right 
-              now for businesses just like yours.
+              Our main service is on-site prompt training for your team. We start by
+              looking at how your people use AI today and timing a few routine tasks.
+              Then we train on those same tasks, using your own emails, documents, and
+              procedures.
             </p>
             <p>
-              We specialize in identifying opportunities where AI can make the biggest 
-              impact on your business operations. From automating routine tasks to 
-              enhancing customer experiences, we provide end-to-end AI solutions that 
-              deliver measurable results.
+              Afterward we measure again: time, rework, quality, and how often the tools
+              get used. You get a short written summary of what changed and what didn't.
+              If something didn't help, we'll say so and recommend dropping it.
+            </p>
+            <p>
+              When training points to something worth building, such as a workflow
+              automation, a custom assistant, or a machine learning model on your own data,
+              we can do that too.
             </p>
           </div>
         </div>
@@ -108,22 +109,22 @@ function About() {
           <div className="values-grid">
             <div className="value-card">
               <h3>Local Focus</h3>
-              <p>We understand the unique challenges and opportunities of local businesses</p>
+              <p>We understand the challenges and opportunities of businesses in our region</p>
             </div>
-            
+
             <div className="value-card">
-              <h3>Practical Solutions</h3>
-              <p>We deliver AI implementations that solve real problems and generate ROI</p>
+              <h3>Measured Results</h3>
+              <p>We record how work looks before and after, so nobody is guessing</p>
             </div>
-            
+
             <div className="value-card">
-              <h3>Personal Service</h3>
-              <p>Every client receives dedicated attention and customized solutions</p>
+              <h3>Honest Advice</h3>
+              <p>If AI isn't the right answer for something, we'll tell you</p>
             </div>
-            
+
             <div className="value-card">
-              <h3>Ongoing Support</h3>
-              <p>We're with you every step of the way, from planning to implementation</p>
+              <h3>Hands-On Support</h3>
+              <p>On-site training and follow-up when your team has questions</p>
             </div>
           </div>
         </div>
