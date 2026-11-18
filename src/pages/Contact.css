@@ -64,3 +64,41 @@
 .alternative-contact strong {
   color: var(--color-white);
 }
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.contact-actions .cta-button-large {
+  margin-bottom: 0;
+}
+
+.cta-button-secondary {
+  display: inline-block;
+  padding: 16px 38px;
+  border: 2px solid var(--color-ink);
+  border-radius: 5px;
+  color: var(--color-ink);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button-secondary:hover {
+  background-color: var(--color-ink);
+  color: var(--color-bg);
+}
+
+.alternative-contact a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.alternative-contact a:hover {
+  text-decoration: underline;
+}

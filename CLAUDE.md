@@ -47,7 +47,7 @@ React 18 single-page app, Vite 4, React Router 6, `react-helmet-async` for per-p
 - `/` Home
 - `/about` About
 - `/tech` Tools we train on and support
-- `/contact` Contact (links to the external form at forms.berksai.com)
+- `/contact` Contact (email and phone buttons; all "book a consultation" CTAs link here. A hosted form is planned, see ACTION-PLAN.md)
 - `/blog` and `/blog/:postId` Blog index and posts (post components live in `src/pages/blog/posts/`)
 
 ### Components

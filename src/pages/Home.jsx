@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import './Home.css'
 
-const CONTACT_URL = 'https://forms.berksai.com/forms/QLA1OKsAhBwX5HWGyJap0'
-
 function Home() {
   return (
     <div className="home-page">
@@ -31,14 +29,9 @@ function Home() {
             else AI is worth the money.
           </p>
           <div className="hero-actions">
-            <a
-              href={CONTACT_URL}
-              className="cta-button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link to="/contact" className="cta-button">
               Book a free consultation
-            </a>
+            </Link>
             <Link to="/about" className="text-link">About BerksAI &rarr;</Link>
           </div>
         </div>

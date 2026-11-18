@@ -300,12 +300,7 @@ function Post3() {
             for your specific business needs. We'll talk through your workflow, identify bottlenecks, 
             and recommend practical solutions—no fluff, no buzzwords.
           </p>
-          <Link 
-            to="https://forms.berksai.com/forms/QLA1OKsAhBwX5HWGyJap0" 
-            className="cta-button"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/contact" className="cta-button">
             Book Free Consultation
           </Link>
         </div>

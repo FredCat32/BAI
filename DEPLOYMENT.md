@@ -38,7 +38,7 @@ DNS is managed at **Namecheap** (Advanced DNS). Vercel expects:
 Notes:
 - Use the exact values Vercel shows in Settings > Domains for this project. They are project-specific and can change.
 - There must be **no** `A` record for `www` alongside the CNAME. A leftover `A www` pointing at the old droplet is what kept `www` invalid.
-- The old droplet IP (167.99.49.15) should not appear on any record that serves the website. The `forms` subdomain also pointed at it, so `forms.berksai.com` (the contact form linked from the site) will not work unless that service is rehosted.
+- The old droplet IP (167.99.49.15) should not appear on any record that serves the website. The `forms` subdomain also pointed at it, so `forms.berksai.com` no longer works. The site no longer links to it; CTAs go to `/contact`, which uses email and phone links. The `A forms` record can be deleted.
 
 ### Email records: do not delete
 

@@ -270,12 +270,7 @@ function Post1() {
             free consultation to discuss which AI solutions make sense for your business. 
             No sales pitch—just an honest conversation about what's possible.
           </p>
-          <Link 
-            to="https://forms.berksai.com/forms/QLA1OKsAhBwX5HWGyJap0" 
-            className="cta-button"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/contact" className="cta-button">
             Book Free Consultation
           </Link>
         </div>

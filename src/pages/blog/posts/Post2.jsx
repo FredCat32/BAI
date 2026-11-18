@@ -340,12 +340,7 @@ function Post2() {
             about your challenges and whether automation can help. Check out our{' '}
             <Link to="/">services</Link> or book a free consultation.
           </p>
-          <Link 
-            to="https://forms.berksai.com/forms/QLA1OKsAhBwX5HWGyJap0" 
-            className="cta-button"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/contact" className="cta-button">
             Book Free Consultation
           </Link>
         </div>
