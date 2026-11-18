@@ -4,6 +4,7 @@ import Post1 from './posts/Post1'
 import Post2 from './posts/Post2'
 import Post3 from './posts/Post3'
 import Post4 from './posts/Post4'
+import Post5 from './posts/Post5'
 import WhenNotToUseAI from './posts/when-not-to-use-ai'
 
 const posts = {
@@ -11,6 +12,7 @@ const posts = {
   'what-i-learned-helping-pennsylvania-businesses-implement-ai': Post2,
   'ai-tools-i-actually-use-every-day': Post3,
   'why-im-starting-an-ai-consulting-business-in-berks-county': Post4,
+  'enabling-ai-use-inside-your-company': Post5,
   'when-not-to-use-ai': WhenNotToUseAI
 }
 

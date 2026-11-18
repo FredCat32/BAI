@@ -4,6 +4,13 @@ import './Blog.css'
 
 const blogPosts = [
   {
+    id: 'enabling-ai-use-inside-your-company',
+    title: 'Enabling AI Use Inside Your Company: What the Research Says About Quality and Efficiency',
+    date: 'November 18, 2026',
+    excerpt: 'What published studies show about AI, quality, and efficiency at work, why your employees are probably already using AI, and six practical steps to enable it safely. Every source linked.',
+    readTime: '8 min read'
+  },
+  {
     id: 'why-im-starting-an-ai-consulting-business-in-berks-county',
     title: 'Why I\'m Starting an AI Consulting Business in Berks County (And What I\'ve Learned So Far)',
     date: 'March 3, 2026',
