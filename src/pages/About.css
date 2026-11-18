@@ -48,7 +48,7 @@
 .about-section p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #cccccc;
+  color: var(--color-muted);
   margin-bottom: 15px;
 }
 
@@ -63,14 +63,14 @@
   max-width: 500px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.1);
+  box-shadow: 0 8px 32px rgba(22, 24, 29, 0.08);
   border: 2px solid var(--color-gray-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-image:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(220, 38, 38, 0.2);
+  box-shadow: 0 12px 40px rgba(22, 24, 29, 0.14);
 }
 
 .image-caption {
@@ -111,7 +111,7 @@
 .founder-text p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #cccccc;
+  color: var(--color-muted);
   margin-bottom: 20px;
 }
 
@@ -125,14 +125,14 @@
   max-width: 400px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.1);
+  box-shadow: 0 8px 32px rgba(22, 24, 29, 0.08);
   border: 2px solid var(--color-gray-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .founder-photo:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(220, 38, 38, 0.2);
+  box-shadow: 0 12px 40px rgba(22, 24, 29, 0.14);
 }
 
 .company-content {
@@ -183,7 +183,7 @@
 }
 
 .value-card p {
-  color: #cccccc;
+  color: var(--color-muted);
   line-height: 1.6;
 }
 

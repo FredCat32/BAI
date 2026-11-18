@@ -3,8 +3,8 @@
   gap: 1rem;
   margin: 2rem 0;
   padding: 1.5rem;
-  background: #1a1a1a;
-  border-left: 3px solid #dc2626;
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-accent);
   border-radius: 4px;
 }
 
@@ -20,19 +20,19 @@
 
 .author-name {
   margin: 0 0 0.25rem;
-  color: #ffffff;
+  color: var(--color-ink);
   font-size: 1rem;
 }
 
 .author-title {
   margin: 0 0 0.5rem;
-  color: #999999;
+  color: var(--color-muted);
   font-size: 0.9rem;
 }
 
 .author-bio {
   margin: 0;
-  color: #cccccc;
+  color: var(--color-muted);
   font-size: 0.9rem;
   line-height: 1.4;
 }

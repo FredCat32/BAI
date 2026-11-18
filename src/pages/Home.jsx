@@ -2,163 +2,165 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import './Home.css'
 
+const CONTACT_URL = 'https://forms.berksai.com/forms/QLA1OKsAhBwX5HWGyJap0'
+
 function Home() {
   return (
     <div className="home-page">
       <Helmet>
-        <title>BerksAI | Protect Your AI Investment with Expert Prompt Engineering</title>
+        <title>BerksAI | AI Prompt Training & Consulting in Berks County, PA</title>
         <meta
           name="description"
-          content="Professional AI consulting and prompt engineering for Pennsylvania businesses. Protect your AI investment with expert strategy, custom prompt optimization, and honest ROI assessments. Based in Oley, PA."
+          content="Hands-on AI prompt training and consulting for Pennsylvania businesses. Get real value from the AI tools you already pay for. Based in Oley, PA."
         />
         <link rel="canonical" href="https://berksai.com/" />
-        <meta property="og:title" content="BerksAI | Protect Your AI Investment with Expert Prompt Engineering" />
-        <meta property="og:description" content="Expert AI consulting and prompt engineering. Protect your AI investment with proven strategies and honest ROI assessments." />
+        <meta property="og:title" content="BerksAI | AI Prompt Training & Consulting in Berks County, PA" />
+        <meta property="og:description" content="Hands-on AI prompt training and consulting for Pennsylvania businesses. Get real value from the AI tools you already pay for." />
         <meta property="og:url" content="https://berksai.com/" />
         <meta property="og:type" content="website" />
       </Helmet>
-        <section className="hero">
-        <div className="container">
-          <div className="hero-content">
-            <div className="hero-badge">Professional AI Consulting</div>
-            <h1>Protect Your AI Investment</h1>
-            <p className="hero-subtitle">
-              Expert prompt engineering and AI strategy for Pennsylvania businesses.
-              Don't waste money on AI that doesn't deliver—get it right from the start.
-            </p>
-            <div className="hero-stats">
-              <div className="stat-item">
-                <div className="stat-number">80%</div>
-                <div className="stat-label">AI Projects Fail</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">$47K</div>
-                <div className="stat-label">Average Wasted Investment</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">6 Months</div>
-                <div className="stat-label">Time Lost to Poor Implementation</div>
-              </div>
-            </div>
-            <Link 
-              to="https://forms.berksai.com/forms/QLA1OKsAhBwX5HWGyJap0" 
+
+      <section className="hero">
+        <div className="container hero-inner">
+          <p className="eyebrow">Oley, PA &middot; Serving Berks County and Eastern Pennsylvania</p>
+          <h1>Protect your AI investment.</h1>
+          <p className="hero-subtitle">
+            Most businesses are already paying for AI tools. The difference between a
+            subscription that gets used and one that doesn't usually comes down to how
+            well your team knows how to ask. We train your people to write prompts that
+            work, and help you decide where AI is worth the money.
+          </p>
+          <div className="hero-actions">
+            <a
+              href={CONTACT_URL}
               className="cta-button"
               target="_blank"
-              rel="noopener noreferrer" 
+              rel="noopener noreferrer"
             >
-              Schedule a Consultation
-            </Link>
-            <p className="local-badge">
-              📍 Based in Oley, PA • Serving Berks County, Reading, King of Prussia, Philadelphia & Beyond
+              Book a free consultation
+            </a>
+            <Link to="/about" className="text-link">About BerksAI &rarr;</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="feature">
+        <div className="container feature-grid">
+          <div>
+            <h2>Prompt training for your team</h2>
+            <p className="lead">
+              Hands-on sessions built around the work your team actually does, not
+              generic examples.
             </p>
           </div>
+          <ul className="check-list">
+            <li>
+              <strong>Prompts for your real tasks.</strong> Emails, proposals, reports,
+              customer replies, and whatever else eats your week.
+            </li>
+            <li>
+              <strong>A shared prompt library.</strong> Tested templates your whole team
+              can reuse, so results don't depend on who happens to be good at it.
+            </li>
+            <li>
+              <strong>Knowing the limits.</strong> Where AI is reliable, where it makes
+              things up, and what should never go into a chat window.
+            </li>
+            <li>
+              <strong>Written reference.</strong> Everything documented so training
+              sticks after the session ends.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="feature alt">
+        <div className="container feature-grid">
+          <div>
+            <h2>An honest look before you spend</h2>
+            <p className="lead">
+              Sometimes the right answer is a better prompt, a different tool, or no AI
+              at all. We'll tell you which.
+            </p>
+          </div>
+          <ul className="check-list">
+            <li>
+              <strong>Review of what you're paying for.</strong> Which tools your team
+              uses, which they don't, and why.
+            </li>
+            <li>
+              <strong>Plain-language recommendations.</strong> Costs, tradeoffs, and a
+              realistic timeline before anything gets built.
+            </li>
+            <li>
+              <strong>Small pilots first.</strong> Prove it works on one process before
+              committing to more.
+            </li>
+          </ul>
         </div>
       </section>
 
       <section className="services">
         <div className="container">
-          <h2>Specialized AI Services</h2>
-          <h3 className="section-intro">
-            We ensure your AI investment delivers measurable results through expert engineering and strategic implementation.
-          </h3>
-          
+          <h2>Also available</h2>
+          <p className="section-intro">
+            When training and strategy point to something worth building, we build it.
+          </p>
           <div className="services-grid">
-            <div className="service-card featured">
-              <div className="service-icon">🎯</div>
-              <h3>Prompt Engineering & Optimization</h3>
-              <p>
-                Expert prompt design that makes AI actually work for your business. We engineer, test, 
-                and optimize prompts to deliver consistent, accurate results—not generic responses.
-              </p>
-              <ul className="service-benefits">
-                <li>Custom prompt templates for your workflows</li>
-                <li>A/B testing and performance optimization</li>
-                <li>Documentation and training for your team</li>
-              </ul>
-            </div>
-            
-            <div className="service-card featured">
-              <div className="service-icon">🛡️</div>
-              <h3>AI Strategy & ROI Protection</h3>
-              <p>
-                Honest assessment of where AI will help your business and where it won't. We prevent 
-                expensive mistakes and ensure you invest in solutions that actually deliver returns.
-              </p>
-              <ul className="service-benefits">
-                <li>Cost-benefit analysis before implementation</li>
-                <li>Realistic timeline and expectation setting</li>
-                <li>Proof-of-concept before full investment</li>
-              </ul>
-            </div>
-            
             <div className="service-card">
-              <div className="service-icon">🤖</div>
-              <h3>Custom AI Assistants</h3>
+              <h3>Workflow automation</h3>
               <p>
-                AI chatbots and assistants trained on your business data, designed to handle real 
-                customer inquiries with accurate, helpful responses 24/7.
+                Client intake, follow-ups, scheduling, and other repetitive multi-step
+                processes.
               </p>
             </div>
-            
             <div className="service-card">
-              <div className="service-icon">⚙️</div>
-              <h3>Workflow Automation</h3>
+              <h3>Custom AI assistants</h3>
               <p>
-                Intelligent automation for client intake, scheduling, follow-ups, and multi-step 
-                processes that eliminate repetitive manual work.
+                Chatbots and internal assistants trained on your own documents and
+                policies.
               </p>
             </div>
-            
             <div className="service-card">
-              <div className="service-icon">📄</div>
-              <h3>Document Intelligence</h3>
+              <h3>Document processing</h3>
               <p>
-                AI-powered document processing that extracts and organizes information from 
-                PDFs, invoices, contracts, and forms automatically.
-              </p>
-            </div>
-            
-            <div className="service-card">
-              <div className="service-icon">🔗</div>
-              <h3>Integration & Training</h3>
-              <p>
-                Complete implementation with your existing tools, comprehensive team training, 
-                and ongoing support to ensure long-term success.
+                Pull structured information out of PDFs, invoices, contracts, and forms.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="about">
-  <div className="container">
-    <div className="about-simple">
-      <h2>Why Work With BerksAI</h2>
-      <ul className="value-list">
-        <li>
-          <strong>Local & Accessible:</strong> Based in Oley, serving Berks County with hands-on support
-        </li>
-        <li>
-          <strong>Custom Solutions:</strong> Tailored automation systems, not cookie-cutter templates
-        </li>
-        <li>
-          <strong>Practical Focus:</strong> We build what works—if it doesn't save time or money, we don't build it
-        </li>
-        <li>
-          <strong>Full Support:</strong> From consultation through ongoing maintenance, we're with you
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+      <section className="feature alt">
+        <div className="container">
+          <div className="about-simple">
+            <h2>Why work with BerksAI</h2>
+            <ul className="value-list">
+              <li>
+                <strong>Local and accessible:</strong> Based in Oley, with in-person
+                sessions across Berks County.
+              </li>
+              <li>
+                <strong>Practical focus:</strong> If it won't save you time or money,
+                we'll say so.
+              </li>
+              <li>
+                <strong>Built around your work:</strong> Training and solutions
+                tailored to your business, not a template.
+              </li>
+              <li>
+                <strong>Ongoing support:</strong> Questions don't stop when the
+                engagement does.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <section className="blog-highlight">
         <div className="container">
           <div className="blog-cta">
-            <h2>Latest from the BerksAI Blog</h2>
-            <p>
-              Practical AI insights and automation tips for Pennsylvania businesses
-            </p>
+            <h2>From the blog</h2>
             <div className="featured-post">
               <h3>
                 <Link to="/blog/what-i-learned-helping-pennsylvania-businesses-implement-ai">
@@ -166,12 +168,11 @@ function Home() {
                 </Link>
               </h3>
               <p>
-                Real insights from working with local Berks County businesses—what actually works, 
-                what doesn't, and what you should know before spending a dime on AI. Honest talk 
-                about costs, timelines, and ROI.
+                What actually works, what doesn't, and what to know before spending
+                a dime on AI. Honest talk about costs, timelines, and ROI.
               </p>
               <Link to="/blog" className="blog-link">
-                Read More Articles →
+                Read more articles &rarr;
               </Link>
             </div>
           </div>
@@ -180,74 +181,44 @@ function Home() {
 
       <section className="faq-section">
         <div className="container">
-          <h2>Frequently Asked Questions</h2>
+          <h2>Frequently asked questions</h2>
           <div className="faq-grid">
             <div className="faq-item">
               <h3>What areas does BerksAI serve?</h3>
               <p>
-                We're based in Oley, PA and serve Berks County (Reading, Wyomissing, Oley), 
-                Montgomery County (King of Prussia, Norristown), Philadelphia and the Main Line 
-                suburbs, as well as Lancaster, Lehigh, Chester, and Delaware counties. We work 
-                with businesses throughout Eastern Pennsylvania and remotely across the state 
-                and beyond.
+                We're based in Oley, PA and serve Berks County (Reading, Wyomissing,
+                Oley), Montgomery County (King of Prussia, Norristown), Philadelphia
+                and the Main Line, as well as Lancaster, Lehigh, Chester, and Delaware
+                counties. We also work remotely.
               </p>
             </div>
 
             <div className="faq-item">
-              <h3>How much does AI automation cost?</h3>
+              <h3>Do we need technical knowledge?</h3>
               <p>
-                Project costs vary based on complexity. A basic AI chatbot starts around 
-                $2,500-5,000, workflow automation systems range from $5,000-15,000, and 
-                custom enterprise solutions start at $15,000+. We offer free consultations 
-                to provide accurate quotes based on your specific needs.
+                No. Training is aimed at non-technical staff, and we handle any
+                technical implementation ourselves.
               </p>
             </div>
 
             <div className="faq-item">
-              <h3>How long does implementation take?</h3>
+              <h3>What types of businesses can benefit?</h3>
               <p>
-                Most projects take 2-6 weeks from initial consultation to launch. Simple 
-                chatbot implementations can be completed in 2-3 weeks, while complex workflow 
-                automation or custom AI systems may take 4-8 weeks. We provide detailed 
-                timelines during the consultation phase.
-              </p>
-            </div>
-
-            <div className="faq-item">
-              <h3>Do I need technical knowledge to use AI?</h3>
-              <p>
-                Not at all. We handle all the technical implementation and provide complete 
-                training for your team. Our solutions are designed to be user-friendly and 
-                integrate seamlessly with your existing tools. We also provide ongoing support 
-                to ensure everything runs smoothly.
-              </p>
-            </div>
-
-            <div className="faq-item">
-              <h3>What types of businesses can benefit from AI?</h3>
-              <p>
-                Any business with repetitive workflows can benefit. We've helped HVAC companies, 
-                contractors, professional services, retail businesses, healthcare providers, and 
-                more. If you're spending time on manual tasks like customer service, email 
-                management, scheduling, or data entry, AI can help.
+                Any business where people spend time on writing, customer
+                communication, scheduling, or data entry. A free consultation will tell
+                you quickly whether AI is a good fit.
               </p>
             </div>
 
             <div className="faq-item">
               <h3>How do I get started?</h3>
               <p>
-                Book a free consultation call at 267-357-8007 or through our contact form. 
-                We'll discuss your business challenges, identify automation opportunities, 
-                and provide a customized roadmap with cost estimates. No commitment required.
+                Call 267-357-8007 or use the contact form to book a free consultation.
+                We'll talk through your situation and outline next steps. No
+                commitment required.
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="footer-highlights">
-        <div className="container">
-      
         </div>
       </section>
     </div>
