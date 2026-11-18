@@ -6,94 +6,124 @@ function Home() {
   return (
     <div className="home-page">
       <Helmet>
-        <title>BerksAI | AI Automation & Consulting for Pennsylvania Businesses</title>
+        <title>BerksAI | Protect Your AI Investment with Expert Prompt Engineering</title>
         <meta
           name="description"
-          content="AI automation and consulting for Berks County businesses. Custom chatbots, workflow automation, and AI solutions. Based in Oley, PA serving Reading, King of Prussia, Philadelphia."
+          content="Professional AI consulting and prompt engineering for Pennsylvania businesses. Protect your AI investment with expert strategy, custom prompt optimization, and honest ROI assessments. Based in Oley, PA."
         />
         <link rel="canonical" href="https://berksai.com/" />
-        <meta property="og:title" content="BerksAI | AI Automation & Consulting for Pennsylvania Businesses" />
-        <meta property="og:description" content="AI automation and consulting for Berks County businesses. Custom chatbots, workflow automation, and AI solutions." />
+        <meta property="og:title" content="BerksAI | Protect Your AI Investment with Expert Prompt Engineering" />
+        <meta property="og:description" content="Expert AI consulting and prompt engineering. Protect your AI investment with proven strategies and honest ROI assessments." />
         <meta property="og:url" content="https://berksai.com/" />
         <meta property="og:type" content="website" />
       </Helmet>
         <section className="hero">
         <div className="container">
           <div className="hero-content">
-            <h1>AI Automation & Consulting for Berks County Businesses</h1>
-            <p>
-              We help Berks County and Pennsylvania businesses automate repetitive workflows using AI—client intake, 
-              follow-ups, scheduling, and more—with custom AI solutions that save time and money.
+            <div className="hero-badge">Professional AI Consulting</div>
+            <h1>Protect Your AI Investment</h1>
+            <p className="hero-subtitle">
+              Expert prompt engineering and AI strategy for Pennsylvania businesses.
+              Don't waste money on AI that doesn't deliver—get it right from the start.
             </p>
-            <p className="local-badge">
-              📍 Based in Oley, PA • Serving Berks County, Reading, King of Prussia, Philadelphia & Beyond
-            </p>
+            <div className="hero-stats">
+              <div className="stat-item">
+                <div className="stat-number">80%</div>
+                <div className="stat-label">AI Projects Fail</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">$47K</div>
+                <div className="stat-label">Average Wasted Investment</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">6 Months</div>
+                <div className="stat-label">Time Lost to Poor Implementation</div>
+              </div>
+            </div>
             <Link 
               to="https://forms.berksai.com/forms/QLA1OKsAhBwX5HWGyJap0" 
               className="cta-button"
               target="_blank"
               rel="noopener noreferrer" 
             >
-              Contact Us
+              Schedule a Consultation
             </Link>
+            <p className="local-badge">
+              📍 Based in Oley, PA • Serving Berks County, Reading, King of Prussia, Philadelphia & Beyond
+            </p>
           </div>
         </div>
       </section>
 
       <section className="services">
         <div className="container">
-          <h2>AI Automation Services for Pennsylvania Businesses</h2>
-          <h3 className="section-intro hero-content">
-            We build custom AI and automation systems designed around your business—
-            from simple workflows to advanced AI agents.
+          <h2>Specialized AI Services</h2>
+          <h3 className="section-intro">
+            We ensure your AI investment delivers measurable results through expert engineering and strategic implementation.
           </h3>
           
           <div className="services-grid">
+            <div className="service-card featured">
+              <div className="service-icon">🎯</div>
+              <h3>Prompt Engineering & Optimization</h3>
+              <p>
+                Expert prompt design that makes AI actually work for your business. We engineer, test, 
+                and optimize prompts to deliver consistent, accurate results—not generic responses.
+              </p>
+              <ul className="service-benefits">
+                <li>Custom prompt templates for your workflows</li>
+                <li>A/B testing and performance optimization</li>
+                <li>Documentation and training for your team</li>
+              </ul>
+            </div>
+            
+            <div className="service-card featured">
+              <div className="service-icon">🛡️</div>
+              <h3>AI Strategy & ROI Protection</h3>
+              <p>
+                Honest assessment of where AI will help your business and where it won't. We prevent 
+                expensive mistakes and ensure you invest in solutions that actually deliver returns.
+              </p>
+              <ul className="service-benefits">
+                <li>Cost-benefit analysis before implementation</li>
+                <li>Realistic timeline and expectation setting</li>
+                <li>Proof-of-concept before full investment</li>
+              </ul>
+            </div>
+            
             <div className="service-card">
+              <div className="service-icon">🤖</div>
+              <h3>Custom AI Assistants</h3>
+              <p>
+                AI chatbots and assistants trained on your business data, designed to handle real 
+                customer inquiries with accurate, helpful responses 24/7.
+              </p>
+            </div>
+            
+            <div className="service-card">
+              <div className="service-icon">⚙️</div>
               <h3>Workflow Automation</h3>
               <p>
-                Automated systems for client intake, lead follow-ups, appointment 
-                scheduling, and multi-step processes that eliminate manual work.
+                Intelligent automation for client intake, scheduling, follow-ups, and multi-step 
+                processes that eliminate repetitive manual work.
               </p>
             </div>
             
             <div className="service-card">
-              <h3>AI Chatbots & Assistants</h3>
+              <div className="service-icon">📄</div>
+              <h3>Document Intelligence</h3>
               <p>
-                Custom chatbots for your website that handle customer inquiries, 
-                schedule appointments, and provide support 24/7.
-              </p>
-            </div>
-            
-            <div className="service-card">
-              <h3>Document Processing & Extraction</h3>
-              <p>
-                AI-powered systems that read, extract, and organize information from 
+                AI-powered document processing that extracts and organizes information from 
                 PDFs, invoices, contracts, and forms automatically.
               </p>
             </div>
             
             <div className="service-card">
-              <h3>Email & Communication Automation</h3>
+              <div className="service-icon">🔗</div>
+              <h3>Integration & Training</h3>
               <p>
-                Intelligent email systems that sort messages, send automatic responses, 
-                and manage client communications without manual intervention.
-              </p>
-            </div>
-            
-            <div className="service-card">
-              <h3>Custom AI Solutions</h3>
-              <p>
-                Specialized AI systems tailored to your business—including knowledge 
-                bases, intelligent agents, and custom-trained models.
-              </p>
-            </div>
-            
-            <div className="service-card">
-              <h3>Integration & Support</h3>
-              <p>
-                Complete implementation, team training, and ongoing support to ensure 
-                your automation systems work seamlessly with your existing tools.
+                Complete implementation with your existing tools, comprehensive team training, 
+                and ongoing support to ensure long-term success.
               </p>
             </div>
           </div>
