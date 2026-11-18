@@ -1,207 +1,66 @@
-# BerksAI Chatbot Deployment Guide
+# Deployment
 
-This guide will help you deploy the chatbot to your DigitalOcean server.
+The site is a static Vite/React build hosted on **Vercel**, with the code on GitHub at `FredCat32/BAI`.
 
-## Prerequisites
+> The previous DigitalOcean droplet (Nginx + PM2 + Express) was decommissioned. `deploy.sh`, `server-setup.sh`, and `nginx-config.conf` are legacy files and no longer used.
 
-- SSH access to your DigitalOcean server (configured as `berksai` in SSH config)
-- Anthropic API key
-- Nginx installed on server
+## How deploys work
 
-## One-Time Server Setup
+1. Commit and push to `main`.
+2. Vercel builds with `npm run build` and publishes `dist/`.
+3. The production domains `berksai.com` and `www.berksai.com` update automatically.
 
-**Step 1: Copy setup script to server**
-```bash
-scp server-setup.sh berksai:/var/www/berksai/
-```
+Pushes to other branches create preview deployments with their own URLs.
 
-**Step 2: SSH into server and run setup**
-```bash
-ssh berksai
-cd /var/www/berksai
-./server-setup.sh
-```
+Config lives in `vercel.json`:
+- `buildCommand`: `npm run build`
+- `outputDirectory`: `dist`
+- Rewrite of every route to `/index.html` so React Router deep links (`/about`, `/blog/...`) work
+- `Cache-Control: public, max-age=31536000, immutable` on `/assets/*`
 
-**Step 3: Add your Anthropic API key**
-```bash
-nano /var/www/berksai/server/.env
-```
-
-Replace `your-api-key-here` with your actual API key:
-```env
-ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxx
-```
-
-Save and exit (Ctrl+X, Y, Enter)
-
-**Step 4: Update Nginx configuration**
-```bash
-sudo nano /etc/nginx/sites-available/berksai.com
-```
-
-Add this location block inside your `server` block (before the existing `location /` block):
-```nginx
-# API proxy to Express backend
-location /api {
-    proxy_pass http://localhost:3001;
-    proxy_http_version 1.1;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection 'upgrade';
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto $scheme;
-    proxy_cache_bypass $http_upgrade;
-}
-```
-
-**Step 5: Test and reload Nginx**
-```bash
-sudo nginx -t
-sudo systemctl reload nginx
-```
-
-**Step 6: Restart backend**
-```bash
-pm2 restart berksai-api
-```
-
-**Step 7: Verify everything is running**
-```bash
-# Check PM2 status
-pm2 status
-
-# Check backend logs
-pm2 logs berksai-api --lines 50
-
-# Test API endpoint
-curl http://localhost:3001/health
-```
-
-You should see: `{"status":"ok","timestamp":"..."}`
-
-## Regular Deployments
-
-After the one-time setup, deploying updates is simple:
+## Local check before pushing
 
 ```bash
-./deploy.sh
+npm run build     # must succeed
+npm run preview   # look at the production build locally
+npm run lint
 ```
 
-This script will:
-1. Build the React frontend
-2. Deploy frontend files to server
-3. Deploy backend files to server
-4. Install/update backend dependencies
-5. Restart the backend with PM2
+## Domain and DNS
 
-## Monitoring
+DNS is managed at **Namecheap** (Advanced DNS). Vercel expects:
 
-**Check backend status:**
-```bash
-ssh berksai
-pm2 status
-pm2 logs berksai-api
-```
+| Type  | Host  | Value |
+| ----- | ----- | ----- |
+| A     | `@`   | the IP shown under the project's Settings > Domains |
+| CNAME | `www` | the project-specific target shown under Settings > Domains |
 
-**Check API usage:**
-```bash
-curl https://berksai.com/api/usage
-```
+Notes:
+- Use the exact values Vercel shows in Settings > Domains for this project. They are project-specific and can change.
+- There must be **no** `A` record for `www` alongside the CNAME. A leftover `A www` pointing at the old droplet is what kept `www` invalid.
+- The old droplet IP (167.99.49.15) should not appear on any record that serves the website. The `forms` subdomain also pointed at it, so `forms.berksai.com` (the contact form linked from the site) will not work unless that service is rehosted.
 
-**Monitor costs:**
-Backend logs show real-time cost tracking:
-```
-API call: 245 in + 120 out = $0.0025 | Daily total: $1.25 / $10.00
-```
+### Email records: do not delete
 
-## Managing PM2
+Email is Google Workspace plus SendGrid. Keep these records:
+- MX records for Google
+- `TXT @` SPF (`v=spf1 include:_spf.google.com ~all`)
+- `TXT google._domainkey` DKIM
+- `TXT _dmarc` DMARC
+- SendGrid `CNAME` records (`em...`, `s1._domainkey`, `s2._domainkey`)
+- Google site verification `TXT` and the Google-hosted `CNAME`
 
-**Useful PM2 commands:**
-```bash
-pm2 status              # View all processes
-pm2 logs berksai-api    # View logs
-pm2 restart berksai-api # Restart backend
-pm2 stop berksai-api    # Stop backend
-pm2 start berksai-api   # Start backend
-pm2 delete berksai-api  # Remove from PM2
-```
+## Environment variables
 
-**PM2 will auto-start on server reboot** (configured by `pm2 startup`)
+None are needed for the static site. If the chatbot backend is brought back, `ANTHROPIC_API_KEY` and `DAILY_BUDGET_CAP` must be set in Vercel (Settings > Environment Variables), never committed. See `CHATBOT-README.md`.
+
+## Rollback
+
+In the Vercel dashboard, open Deployments, pick a previous good deployment, and choose Promote to Production (or Instant Rollback).
 
 ## Troubleshooting
 
-**Backend not starting:**
-```bash
-# Check logs for errors
-pm2 logs berksai-api --err
-
-# Common issues:
-# 1. Missing API key in server/.env
-# 2. Port 3001 already in use
-# 3. Missing dependencies (run: npm install)
-```
-
-**Chatbot not loading:**
-```bash
-# 1. Check if backend is running
-curl http://localhost:3001/health
-
-# 2. Check Nginx is proxying /api
-sudo nginx -t
-curl https://berksai.com/api/health
-
-# 3. Check browser console for errors
-```
-
-**Rate limiting too strict:**
-Edit `/var/www/berksai/server/middleware/rateLimiter.js` and increase limits.
-
-**Budget exceeded:**
-Edit `/var/www/berksai/server/.env` and increase `DAILY_BUDGET_CAP`.
-
-## Files Reference
-
-- `deploy.sh` - Deployment script (run locally)
-- `server-setup.sh` - One-time server setup (run on server)
-- `nginx-config.conf` - Complete Nginx configuration reference
-- `server/.env` - Backend environment variables (on server)
-
-## Testing Before Deployment
-
-**Local testing:**
-```bash
-# Terminal 1 - Backend
-npm run dev:server
-
-# Terminal 2 - Frontend
-npm run dev
-
-# Open: http://localhost:5173
-```
-
-## Security Checklist
-
-- ✅ Anthropic API key in server/.env (not committed to git)
-- ✅ server/.env in .gitignore
-- ✅ Rate limiting enabled
-- ✅ Daily budget cap configured
-- ✅ CORS restricted to berksai.com
-- ✅ PM2 running as non-root user
-
-## Success Verification
-
-After deployment, verify:
-
-1. **Frontend loads:** https://berksai.com
-2. **Chat button appears:** Red circle in bottom-right
-3. **API health check:** https://berksai.com/api/health
-4. **Send test message:** Click chat button, send a message
-5. **Check logs:** `pm2 logs berksai-api` shows API call with costs
-
-## Support
-
-If you encounter issues:
-1. Check PM2 logs: `pm2 logs berksai-api`
-2. Check Nginx logs: `sudo tail -f /var/log/nginx/error.log`
-3. Test API directly: `curl http://localhost:3001/api/health`
+- **Domain shows "Invalid Configuration":** compare the Namecheap records to Settings > Domains, remove conflicting `A`/`AAAA`/`CNAME` records for the same host, then press Refresh. Propagation can take a few minutes to a few hours.
+- **404 on a deep link:** confirm `vercel.json` still contains the SPA rewrite.
+- **Build fails on Vercel but not locally:** check the Node version in Project Settings and the build log.
+- **Old content still showing:** hard refresh. Assets are cached for a year but filenames are hashed, so new builds get new URLs.

@@ -7,6 +7,37 @@
 
 ---
 
+## STATUS UPDATE (November 2026)
+
+This plan was written in March 2026. The business and site have changed since, so read the items below with these notes.
+
+**What changed**
+- **Positioning:** on-site AI prompt training is now the #1 offering, with a focus on ROI. Machine learning, strategy, automation, and other services follow. The older "AI automation consulting" framing in this document is outdated, and n8n/Activepieces are retired.
+- **Hosting:** the site moved from a DigitalOcean droplet (Nginx) to Vercel, deployed from GitHub on every push to `main`. Anything here about Nginx or server-level headers now applies to `vercel.json` instead. See `DEPLOYMENT.md`.
+- **Design:** off-white background with the logo red as the accent. The old black and red palette is gone.
+- **Chatbot:** disabled and not deployed. See `CHATBOT-README.md`.
+- **Content rule:** no invented statistics, clients, testimonials, or case studies. The business is new.
+
+**Done**
+- #1 Missing blog post added to the sitemap
+- #3 and #4 Headshot, About image, and logo converted to WebP
+- #5 `react-helmet-async` with per-page titles, descriptions, and canonicals
+- #6 Author attribution on blog posts (`BlogAuthor`)
+- #7 Image width/height attributes
+- #14 Logo converted to WebP
+
+**Still open**
+- #2 `og-image.jpg` (referenced in meta tags but the file does not exist)
+- #8 Tech page is rewritten around the tools we train on, but still thin on word count
+- #9 Contact page expansion (note: the contact form link points to `forms.berksai.com`, which was hosted on the decommissioned droplet and needs a replacement)
+- #10, #11, #13, #15 Structured data (BlogPosting, Person, WebSite, BreadcrumbList)
+- #12 Code splitting
+- #17 Privacy policy and terms
+- #18 SSR or prerendering (on Vercel the Nginx-level options no longer apply; consider a build-time prerender step or Next.js)
+- #16 Case studies, only once real ones exist
+
+---
+
 ## HOW TO USE THIS PLAN
 
 This action plan is organized by priority and time commitment:
@@ -67,9 +98,9 @@ Each task includes:
 
 **Content to Include:**
 1. BerksAI logo (centered or left)
-2. Tagline: "AI Automation & Consulting for Pennsylvania Businesses"
+2. Tagline: "Protect your AI investment. On-site AI prompt training for Pennsylvania businesses."
 3. Geographic identifier: "Berks County • King of Prussia • Philadelphia"
-4. Clean background (solid or gradient - use brand colors: black #000000, red #dc2626)
+4. Clean background (solid off-white #f8f5ef with the logo red #c8372d as the accent; no gradients)
 
 **Design Tips:**
 - Keep text large (72pt+ for main copy)
@@ -216,7 +247,7 @@ function About() {
         <title>About BerksAI | AI Consultant Matthew Irving | Oley, PA</title>
         <meta
           name="description"
-          content="Meet Matthew Irving, founder of BerksAI. Expert in React, Python, and AI automation serving Berks County businesses. Based in Oley, PA."
+          content="Meet Matthew Irving, founder of BerksAI. On-site AI prompt training and consulting for Berks County businesses. Based in Oley, PA."
         />
         <link rel="canonical" href="https://berksai.com/about" />
 
@@ -242,9 +273,9 @@ function About() {
 
 **Recommended Title Formats:**
 - About: "About BerksAI | AI Consultant Matthew Irving | Oley, PA"
-- Tech: "Technology Stack | AI Tools & Platforms | BerksAI"
+- Tech: "AI Tools We Train On & Support | Copilot, ChatGPT, Claude | BerksAI"
 - Contact: "Contact BerksAI | Free AI Consultation | Berks County, PA"
-- Blog: "BerksAI Blog | AI Tips & Automation Advice for PA Businesses"
+- Blog: "BerksAI Blog | AI Tips & Training Advice for PA Businesses"
 - Blog posts: "[Post Title] | BerksAI Blog"
 
 **Recommended Description Lengths:**
@@ -286,7 +317,7 @@ Add to each blog post component (Post1.jsx, Post2.jsx, Post3.jsx, when-not-to-us
       Founder & AI Consultant at BerksAI
     </p>
     <p className="author-bio">
-      Expert in React, Python, and AI automation for Berks County businesses.
+      On-site AI prompt training and consulting for Berks County businesses.
       Based in Oley, PA.
     </p>
   </div>
@@ -406,44 +437,31 @@ sips -g pixelWidth -g pixelHeight logo.png
 
 **Content Structure:**
 ```markdown
-# Technology Stack We Use
+# The Tools We Train On and Support
 
-[Intro paragraph: 100-150 words about choosing the right tech stack]
+[Intro paragraph: 100-150 words on matching the tool to the team's actual work]
 
-## AI & Language Models
-### Claude (Anthropic)
-- [Use cases for Berks County businesses]
-- [Specific implementation examples]
-- [Cost/benefit analysis]
-- [When to use vs alternatives]
+## Everyday AI Assistants
+### Microsoft Copilot
+### ChatGPT
+### Claude and Claude Cowork
+### Google Gemini
+### Grok and Grok-based bots
+### Perplexity and AI search
+[For each: what it is good at, where it needs a human check, how we train teams on it]
 
-### OpenAI GPT-4
-[Same structure as above]
+## Developer and Technical Tools
+### GitHub Copilot and coding assistants
+### Machine learning on client data
+### Automation and integrations
 
-## Automation Platforms
-### n8n
-### Make (formerly Integromat)
+## Security and Usage Policy
+[What can and cannot be pasted into AI tools, client data handling, written policy]
 
-## Development Frameworks
-### React & JavaScript
-### Python
-### C#
+## How We Choose Tools
+[Selection criteria, cost transparency, starting from the client's existing subscriptions]
 
-## Supporting Technologies
-### Vector Databases
-### APIs & Integrations
-### Hosting & Infrastructure
-
-## Why These Technologies?
-[Explain selection criteria]
-[Cost transparency]
-[Scalability considerations]
-
-## Technology Selection Process
-[How you choose tech for each project]
-[Client consultation process]
-
-## FAQs About Our Tech Stack
+## FAQs About the Tools We Support
 ```
 
 **Writing Guidelines:**
@@ -622,7 +640,7 @@ Add to `src/pages/About.jsx`:
       "@type": "Person",
       "name": "Matthew Irving",
       "jobTitle": "Founder & AI Consultant",
-      "description": "AI consultant specializing in workflow automation, chatbots, and AI solutions for Berks County businesses",
+      "description": "AI trainer and consultant offering on-site prompt training, AI strategy, and automation for Berks County businesses",
       "image": "https://berksai.com/headshot.webp",
       "url": "https://berksai.com/about",
       "email": "matthew.irving@berksai.com",
@@ -639,17 +657,18 @@ Add to `src/pages/About.jsx`:
         "url": "https://berksai.com"
       },
       "knowsAbout": [
-        "AI Automation",
+        "AI Prompt Engineering",
+        "AI Training",
+        "AI Strategy",
+        "Machine Learning",
         "Workflow Automation",
-        "Chatbot Development",
+        "Microsoft Copilot",
+        "ChatGPT",
+        "Claude",
+        "Google Gemini",
         "React",
         "JavaScript",
-        "Python",
-        "C#",
-        "Langchain",
-        "n8n",
-        "Claude",
-        "OpenAI GPT-4"
+        "Python"
       ]
     })}
   </script>
@@ -702,7 +721,6 @@ function App() {
           {/* etc. */}
         </Routes>
       </Suspense>
-      <ChatbotWidget />
     </Router>
   )
 }
@@ -806,6 +824,8 @@ Implement breadcrumb navigation and schema markup for blog posts.
 ### 16. Create 2-3 Detailed Case Studies
 **Time:** 4-6 hours per case study | **Difficulty:** Medium
 
+> **Only write these from real engagements, with the client's permission.** The business is new; do not invent clients, metrics, or testimonials. Until there are real ones, skip this item.
+
 Write comprehensive case studies with:
 - Client background (anonymized if needed)
 - Problem statement
@@ -869,9 +889,9 @@ Create legal pages (can use generator tools + lawyer review):
 **Time:** Varies | **Difficulty:** Medium-Hard
 
 Create short-form video content:
-- "What is AI Automation?" (2-3 minutes)
-- Client testimonial videos
-- Demo of chatbot functionality
+- "How to write a good prompt" (2-3 minutes)
+- Short walkthroughs of Copilot, ChatGPT, and Claude for everyday business tasks
+- Clips from on-site training sessions (with permission)
 - "AI Tips for Berks County Businesses" series
 
 Post to YouTube + embed on site for:
@@ -886,12 +906,12 @@ Post to YouTube + embed on site for:
 ### Week 1 (Critical + High Priority - Hours 1-10)
 **Focus:** Quick wins with immediate SEO impact
 
-- [ ] Day 1-2: Add missing blog post to sitemap (10 min)
-- [ ] Day 2-3: Create og-image.jpg (30 min)
-- [ ] Day 3-4: Compress headshot and about-image (30 min)
-- [ ] Day 4-5: Add image dimensions to all images (30 min)
-- [ ] Day 5-7: Install react-helmet-async and add to all pages (2 hours)
-- [ ] Day 7: Add author attribution to blog posts (20 min)
+- [x] Day 1-2: Add missing blog post to sitemap (10 min) *(done)*
+- [ ] Day 2-3: Create og-image.jpg (30 min) *(still open)*
+- [x] Day 3-4: Compress headshot and about-image (30 min) *(done, WebP)*
+- [x] Day 4-5: Add image dimensions to all images (30 min) *(done)*
+- [x] Day 5-7: Install react-helmet-async and add to all pages (2 hours) *(done)*
+- [x] Day 7: Add author attribution to blog posts (20 min) *(done, `BlogAuthor` component)*
 
 **Expected Impact:** +15-30% traffic, Pass social sharing, Improved CWV
 
@@ -955,8 +975,8 @@ Post to YouTube + embed on site for:
 
 **Rankings:**
 - "AI consulting Berks County" → Top 3
-- "automation services Reading PA" → Top 10
-- "chatbot development Pennsylvania" → Top 20
+- "AI training Reading PA" → Top 10
+- "AI prompt training Pennsylvania" → Top 20
 - Blog long-tail keywords → Top 15 average
 
 **Conversions:**

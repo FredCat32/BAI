@@ -1,6 +1,8 @@
 # COMPREHENSIVE SEO AUDIT REPORT
 ## BerksAI.com
 
+> **Historical snapshot (March 2, 2026).** Since this audit the site moved from DigitalOcean/Nginx to Vercel, was redesigned, and was repositioned around on-site AI prompt training. Several findings here are fixed or outdated; see the status update at the top of `ACTION-PLAN.md` for what is done and what remains. The "AI Automation & Consulting" business description below is the old positioning.
+
 **Audit Date:** March 2, 2026
 **Website:** https://berksai.com
 **Business Type:** AI Automation & Consulting Services (Professional Services)
@@ -111,12 +113,12 @@ BerksAI.com demonstrates strong fundamentals in several areas including excellen
 
 #### Recommendations
 1. Implement server-side rendering (migrate to Next.js) or use react-snap for pre-rendering
-2. Configure security headers in nginx-config.conf
+2. Configure security headers (at audit time in nginx-config.conf; now in the `headers` section of `vercel.json`)
 3. Install react-helmet-async for per-page SEO tags
 4. Add code splitting with React.lazy() to reduce initial bundle size
 
 **Files Requiring Updates:**
-- /Users/matthewirving/Documents/workspace/ReadingAI/BAI/nginx-config.conf (security headers)
+- `vercel.json` (security headers; was nginx-config.conf at audit time)
 - /Users/matthewirving/Documents/workspace/ReadingAI/BAI/src/App.jsx (react-helmet implementation)
 
 ---
@@ -125,10 +127,10 @@ BerksAI.com demonstrates strong fundamentals in several areas including excellen
 
 #### Strengths
 - **Excellent blog content:** 4 comprehensive posts (1,900-2,800 words each)
-- **Strong E-E-A-T signals:** First-hand local client examples, honest advice
+- **Strong E-E-A-T signals:** Honest advice *(the audit also credited "first-hand local client examples"; the business is new, so any client examples in older blog posts need to be verified or removed)*
 - **Geographic optimization:** Heavy use of Berks County, Reading, King of Prussia keywords
 - **Unique perspective:** "When NOT to Use AI" demonstrates authentic expertise
-- **Transparent pricing:** Real cost ranges build trust
+- **Transparent pricing:** Real cost ranges build trust *(since removed from the site; do not reintroduce figures that aren't current and real)*
 
 #### Critical Issues
 - **Thin service pages:**
@@ -409,7 +411,7 @@ BerksAI.com demonstrates strong fundamentals in several areas including excellen
 ## TECHNICAL FINDINGS SUMMARY
 
 ### Server & Hosting
-- **Server:** Nginx (config available in `/nginx-config.conf`)
+- **Server (at audit time):** Nginx (config available in `/nginx-config.conf`). The site now runs on Vercel; headers and caching are set in `vercel.json`.
 - **Build Tool:** Vite 4.4.5
 - **Deployment:** Static files served from `/dist/`
 - **Cache Control:** Properly configured for static assets (1 year) and HTML (no-cache)
@@ -421,7 +423,7 @@ BerksAI.com demonstrates strong fundamentals in several areas including excellen
 - **Bundle:** Single JavaScript bundle (no code splitting)
 
 ### Security
-- **HTTPS:** Assumed (nginx config shows SSL configuration commented out)
+- **HTTPS:** Assumed at audit time. Vercel now provisions and renews certificates automatically.
 - **Security Headers:** Not visible in codebase (may be configured at server level)
 - **CSP:** No Content Security Policy detected
 - **HSTS:** No Strict-Transport-Security header visible

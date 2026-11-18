@@ -1,10 +1,20 @@
 # BerksAI Chatbot Widget
 
+> **Status (Nov 2026): disabled.** The site now runs on Vercel as a static app. The chatbot widget is not mounted in `src/App.jsx` and the Express backend is not deployed. The old DigitalOcean server that ran it (Nginx + PM2) was decommissioned, so the PM2/Nginx instructions that used to be in this file no longer apply.
+>
+> **Why it can't just be switched back on:** `server/middleware/rateLimiter.js` and `budgetTracker.js` keep their state in memory, which does not survive between Vercel serverless invocations. To bring the chatbot back, either:
+> 1. Convert `server/routes/chat.js` into Vercel serverless functions under `api/` and move rate-limit and budget state to external storage (for example Vercel KV or Upstash Redis), or
+> 2. Host the Express backend separately (Railway, Render, Fly.io), set `ANTHROPIC_API_KEY` and `DAILY_BUDGET_CAP` there, allow `https://berksai.com` in CORS, and point the widget's API base URL at it.
+>
+> Then re-add `<ChatbotWidget />` to `src/App.jsx`.
+>
+> **Before re-enabling:** update `server/services/knowledgeBase.js`. It still describes the old "AI automation consulting" positioning and quotes price ranges and timelines that are no longer published on the site. It should reflect the current offering: on-site prompt training first, ROI focus, and no invented figures or client claims. Also restyle `ChatbotWidget.css` for the current off-white theme; it was written for the old dark theme.
+
 AI-powered chatbot for lead generation and customer support on the BerksAI website.
 
 ## Features
 
-✅ **AI-Powered Responses** - Uses Claude 3.5 Haiku for fast, accurate answers
+✅ **AI-Powered Responses** - Uses Claude Haiku 4.5 (`claude-haiku-4-5`) for fast, accurate answers
 ✅ **Lead Capture** - Collects email after 3 message exchanges
 ✅ **Mobile Responsive** - Full-screen on mobile, floating widget on desktop
 ✅ **Spam Protection** - Multi-layer rate limiting
@@ -25,12 +35,7 @@ npm run dev         # Frontend on port 5173
 
 ## Deployment
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for full deployment instructions.
-
-**Quick deploy:**
-```bash
-./deploy.sh
-```
+The chatbot is currently not deployed. See the status note at the top of this file for how to bring it back, and [DEPLOYMENT.md](DEPLOYMENT.md) for how the static site is deployed. `deploy.sh` is legacy and targets the decommissioned server.
 
 ## Configuration
 
@@ -138,22 +143,11 @@ Capture visitor email for lead generation.
 
 ## Monitoring
 
-**PM2 Commands:**
-```bash
-pm2 status              # Check status
-pm2 logs berksai-api    # View logs
-pm2 restart berksai-api # Restart
-```
+*Applies only once the backend is hosted again.* Use your host's log viewer (Vercel Functions logs, Railway/Render logs) instead of the old PM2 commands.
 
-**Check API Health:**
-```bash
-curl https://berksai.com/api/health
-```
+**Check API Health:** `GET /health` on the backend
 
-**View Budget Usage:**
-```bash
-curl https://berksai.com/api/usage
-```
+**View Budget Usage:** `GET /api/usage` on the backend
 
 **Server Logs Show:**
 ```
@@ -220,7 +214,7 @@ router.post('/capture-email', async (req, res) => {
 
 ## Cost Estimation
 
-**Claude 3.5 Haiku Pricing:**
+**Claude Haiku pricing (confirm against Anthropic's current rates; `server/middleware/budgetTracker.js` currently assumes $3 / $15 per million input / output tokens):**
 - Input: $0.003 per 1M tokens
 - Output: $0.015 per 1M tokens
 

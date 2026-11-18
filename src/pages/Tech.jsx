@@ -1,74 +1,83 @@
 import { Helmet } from 'react-helmet-async'
 import './Tech.css'
 
+const tools = [
+  {
+    name: 'Microsoft Copilot',
+    text: 'Copilot inside Word, Excel, Outlook, Teams, and PowerPoint. Where it saves time, where it needs a human check, and how to prompt it for your actual documents and data.',
+  },
+  {
+    name: 'ChatGPT',
+    text: 'Team and enterprise use of ChatGPT, including custom GPTs, file analysis, and shared prompt templates.',
+  },
+  {
+    name: 'Claude and Claude Cowork',
+    text: 'Claude for writing, analysis, and long documents, and Cowork for handing multi-step desktop tasks to an AI agent while keeping a person in charge.',
+  },
+  {
+    name: 'Google Gemini',
+    text: 'Gemini across Google Workspace for teams living in Gmail, Docs, Sheets, and Drive.',
+  },
+  {
+    name: 'Grok and Grok-based bots',
+    text: 'Grok and the bots built on it, including when they are a reasonable fit and what to check before relying on them.',
+  },
+  {
+    name: 'GitHub Copilot and coding assistants',
+    text: 'AI-assisted development tools for teams that write software or maintain internal scripts and spreadsheets.',
+  },
+  {
+    name: 'Perplexity and AI search',
+    text: 'AI-assisted research, with a habit of checking sources before anything reaches a client or a report.',
+  },
+  {
+    name: 'Chatbots and custom assistants',
+    text: 'Assistants trained on your own documents and policies for customer questions or internal help.',
+  },
+  {
+    name: 'Machine learning on your data',
+    text: 'Forecasting, classification, and anomaly detection built from your own records, when the problem calls for it.',
+  },
+  {
+    name: 'Automation and integrations',
+    text: 'Connecting the tools you already use so repetitive steps run without someone copying data by hand.',
+  },
+  {
+    name: 'Security and usage policy',
+    text: 'What can and cannot be pasted into AI tools, how to handle client data, and a written policy your team can follow.',
+  },
+]
+
 function Tech() {
   return (
     <div className="tech-page">
       <Helmet>
-        <title>Technology Stack | AI Tools & Platforms | BerksAI</title>
+        <title>AI Tools We Train On & Support | Copilot, ChatGPT, Claude | BerksAI</title>
         <meta
           name="description"
-          content="Our AI technology stack: n8n workflow automation, GPT-4, Claude, vector databases, and custom AI agents. Enterprise-grade tools for Pennsylvania businesses."
+          content="On-site training and support for the AI tools your business already uses: Microsoft Copilot, ChatGPT, Claude, Gemini, Grok, and more. Based in Oley, PA."
         />
         <link rel="canonical" href="https://berksai.com/tech" />
-        <meta property="og:title" content="Technology Stack | AI Tools & Platforms | BerksAI" />
-        <meta property="og:description" content="Our AI technology stack: n8n workflow automation, GPT-4, Claude, vector databases, and custom AI agents." />
+        <meta property="og:title" content="AI Tools We Train On & Support | BerksAI" />
+        <meta property="og:description" content="On-site training and support for Microsoft Copilot, ChatGPT, Claude, Gemini, Grok, and more." />
         <meta property="og:url" content="https://berksai.com/tech" />
       </Helmet>
       <div className="container">
         <div className="tech-header">
-          <h1>Our Technology Stack</h1>
+          <h1>The tools we train on and support</h1>
+          <p className="tech-intro">
+            Your team probably has access to several of these already. We help them use
+            the ones that fit, and skip the ones that don't.
+          </p>
         </div>
 
         <div className="tech-grid">
-          <div className="tech-card">
-            <h3>n8n Workflow Automation</h3>
-            <p>
-              Build sophisticated automation workflows that eliminate repetitive tasks, 
-              connect your existing tools, and scale your operations without adding headcount.
-            </p>
-          </div>
-
-          <div className="tech-card">
-            <h3>Vector Databases & Embeddings</h3>
-            <p>
-              Transform your documents, customer data, and knowledge bases into intelligent, 
-              searchable resources. Your team gets instant answers from company information 
-              without manual searching.
-            </p>
-          </div>
-
-          <div className="tech-card">
-            <h3>Large Language Models (LLMs)</h3>
-            <p>
-              Deploy custom AI assistants powered by GPT-4, Claude, and open-source models 
-              to handle customer inquiries, generate content, and automate decision-making.
-            </p>
-          </div>
-
-          <div className="tech-card">
-            <h3>API Integration Layer</h3>
-            <p>
-              Connect any tools in your tech stack—CRMs, databases, communication platforms—
-              into unified, automated workflows that work seamlessly together.
-            </p>
-          </div>
-
-          <div className="tech-card">
-            <h3>Custom AI Agents</h3>
-            <p>
-              Purpose-built agents that handle specific business functions: data entry, 
-              email triage, report generation, lead qualification, and more.
-            </p>
-          </div>
-
-          <div className="tech-card">
-            <h3>Cloud Infrastructure</h3>
-            <p>
-              Secure, scalable deployment on modern cloud platforms ensuring reliability, 
-              data privacy, and performance as your automation needs grow.
-            </p>
-          </div>
+          {tools.map((tool) => (
+            <div className="tech-card" key={tool.name}>
+              <h3>{tool.name}</h3>
+              <p>{tool.text}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
