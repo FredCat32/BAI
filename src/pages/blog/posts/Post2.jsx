@@ -1,14 +1,30 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
+import BlogAuthor from '../../../components/BlogAuthor'
 
 function Post2() {
   return (
     <>
+      <Helmet>
+        <title>What I Learned Helping Pennsylvania Businesses Implement AI | BerksAI Blog</title>
+        <meta
+          name="description"
+          content="Real insights from working with Berks County businesses—what works, what doesn't, and what you should know before spending on AI. Honest advice on costs, timelines, and ROI."
+        />
+        <link rel="canonical" href="https://berksai.com/blog/what-i-learned-helping-pennsylvania-businesses-implement-ai" />
+        <meta property="og:title" content="What I Learned Helping Pennsylvania Businesses Implement AI" />
+        <meta property="og:description" content="Real insights from working with Berks County businesses—what works, what doesn't, and what you should know before spending on AI." />
+        <meta property="og:url" content="https://berksai.com/blog/what-i-learned-helping-pennsylvania-businesses-implement-ai" />
+        <meta property="og:type" content="article" />
+      </Helmet>
       <header className="blog-post-header">
         <h1>What I Learned Helping Pennsylvania Businesses Implement AI (And What You Should Know Before Starting)</h1>
         <div className="blog-post-meta">
           <span>February 20, 2026</span> • <span>7 min read</span>
         </div>
       </header>
+
+      <BlogAuthor />
 
       <div className="blog-post-content">
         <p>

@@ -1,14 +1,30 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
+import BlogAuthor from '../../../components/BlogAuthor'
 
 function Post3() {
   return (
     <>
+      <Helmet>
+        <title>AI Tools I Actually Use Every Day | BerksAI Blog</title>
+        <meta
+          name="description"
+          content="Honest review of AI tools I use daily: ChatGPT, Perplexity, Notion AI, Make.com, and Grammarly. What they cost, how I use them, and whether they're worth it for Berks County businesses."
+        />
+        <link rel="canonical" href="https://berksai.com/blog/ai-tools-i-actually-use-every-day" />
+        <meta property="og:title" content="AI Tools I Actually Use Every Day" />
+        <meta property="og:description" content="Honest review of AI tools I use daily: ChatGPT, Perplexity, Notion AI, Make.com. What they cost and whether they're worth it." />
+        <meta property="og:url" content="https://berksai.com/blog/ai-tools-i-actually-use-every-day" />
+        <meta property="og:type" content="article" />
+      </Helmet>
       <header className="blog-post-header">
         <h1>AI Tools I Actually Use Every Day (Personal Recommendations)</h1>
         <div className="blog-post-meta">
           <span>February 24, 2026</span> • <span>5 min read</span>
         </div>
       </header>
+
+      <BlogAuthor />
 
       <div className="blog-post-content">
         <p>

@@ -1,8 +1,20 @@
+import { Helmet } from 'react-helmet-async'
 import './About.css'
 
 function About() {
   return (
     <div className="about-page">
+      <Helmet>
+        <title>About BerksAI | AI Consultant Matthew Irving | Oley, PA</title>
+        <meta
+          name="description"
+          content="Meet Matthew Irving, founder of BerksAI. Expert in React, Python, and AI automation serving Berks County businesses. Based in Oley, PA."
+        />
+        <link rel="canonical" href="https://berksai.com/about" />
+        <meta property="og:title" content="About BerksAI | AI Consultant Matthew Irving" />
+        <meta property="og:description" content="Meet Matthew Irving, founder of BerksAI. Expert in React, Python, and AI automation serving Berks County businesses." />
+        <meta property="og:url" content="https://berksai.com/about" />
+      </Helmet>
       <div className="container">
         <div className="about-header">
           <h1>About BerksAI</h1>
@@ -37,8 +49,11 @@ function About() {
             
             <div className="founder-image">
               <img 
-                src="/about-image.jpg" 
+                src="/headshot.webp" 
                 alt="Matthew Irving - AI Consultant and Founder of BerksAI in Berks County Pennsylvania" 
+                width="1318"
+                height="1098"
+                loading="lazy"
                 className="founder-photo"
               />
             </div>

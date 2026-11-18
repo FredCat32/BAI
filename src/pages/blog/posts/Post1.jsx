@@ -1,14 +1,30 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
+import BlogAuthor from '../../../components/BlogAuthor'
 
 function Post1() {
   return (
     <>
+      <Helmet>
+        <title>5 Ways Pennsylvania Businesses Can Start Using AI Today | BerksAI Blog</title>
+        <meta
+          name="description"
+          content="Practical AI applications for Pennsylvania businesses: chatbots, email automation, document processing, lead follow-up, and content generation. No technical expertise required."
+        />
+        <link rel="canonical" href="https://berksai.com/blog/5-ways-pennsylvania-businesses-can-use-ai" />
+        <meta property="og:title" content="5 Ways Pennsylvania Businesses Can Start Using AI Today" />
+        <meta property="og:description" content="Practical AI applications for Pennsylvania businesses: chatbots, email automation, document processing, and more." />
+        <meta property="og:url" content="https://berksai.com/blog/5-ways-pennsylvania-businesses-can-use-ai" />
+        <meta property="og:type" content="article" />
+      </Helmet>
       <header className="blog-post-header">
         <h1>5 Ways Pennsylvania Businesses Can Start Using AI Today</h1>
         <div className="blog-post-meta">
           <span>February 20, 2026</span> • <span>6 min read</span>
         </div>
       </header>
+
+      <BlogAuthor />
 
       <div className="blog-post-content">
         <p>

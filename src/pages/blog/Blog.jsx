@@ -1,7 +1,22 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import './Blog.css'
 
 const blogPosts = [
+  {
+    id: 'why-im-starting-an-ai-consulting-business-in-berks-county',
+    title: 'Why I\'m Starting an AI Consulting Business in Berks County (And What I\'ve Learned So Far)',
+    date: 'March 3, 2026',
+    excerpt: 'The honest story behind BerksAI: why I\'m building an AI automation consultancy, what I actually know (and don\'t), and why Pennsylvania businesses need practical AI guidance.',
+    readTime: '7 min read'
+  },
+  {
+    id: 'when-not-to-use-ai',
+    title: 'When NOT to Use AI: Honest Advice for Local Businesses',
+    date: 'February 27, 2026',
+    excerpt: 'Not every business problem needs an AI solution. Here\'s my honest take on when to skip the hype and stick with what works.',
+    readTime: '5 min read'
+  },
   {
     id: 'ai-tools-i-actually-use-every-day',
     title: 'AI Tools I Actually Use Every Day (Personal Recommendations)',
@@ -28,6 +43,17 @@ const blogPosts = [
 function Blog() {
   return (
     <div className="blog-page">
+      <Helmet>
+        <title>BerksAI Blog | AI Tips & Automation Advice for PA Businesses</title>
+        <meta
+          name="description"
+          content="Practical AI insights and automation tips for Pennsylvania businesses. Real advice from helping Berks County companies implement AI solutions."
+        />
+        <link rel="canonical" href="https://berksai.com/blog" />
+        <meta property="og:title" content="BerksAI Blog | AI Tips & Automation Advice" />
+        <meta property="og:description" content="Practical AI insights and automation tips for Pennsylvania businesses." />
+        <meta property="og:url" content="https://berksai.com/blog" />
+      </Helmet>
       <div className="container">
         <div className="blog-header">
           <h1>BerksAI Blog</h1>

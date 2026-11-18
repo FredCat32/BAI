@@ -1,9 +1,20 @@
-import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import './Tech.css'
 
 function Tech() {
   return (
     <div className="tech-page">
+      <Helmet>
+        <title>Technology Stack | AI Tools & Platforms | BerksAI</title>
+        <meta
+          name="description"
+          content="Our AI technology stack: n8n workflow automation, GPT-4, Claude, vector databases, and custom AI agents. Enterprise-grade tools for Pennsylvania businesses."
+        />
+        <link rel="canonical" href="https://berksai.com/tech" />
+        <meta property="og:title" content="Technology Stack | AI Tools & Platforms | BerksAI" />
+        <meta property="og:description" content="Our AI technology stack: n8n workflow automation, GPT-4, Claude, vector databases, and custom AI agents." />
+        <meta property="og:url" content="https://berksai.com/tech" />
+      </Helmet>
       <div className="container">
         <div className="tech-header">
           <h1>Our Technology Stack</h1>

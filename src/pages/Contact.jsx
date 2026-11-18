@@ -1,112 +1,43 @@
-import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import './Contact.css'
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
-  })
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! We\'ll get back to you soon.')
-    setFormData({ name: '', email: '', company: '', message: '' })
-  }
-
   return (
     <div className="contact-page">
+      <Helmet>
+        <title>Contact BerksAI | Free AI Consultation | Berks County, PA</title>
+        <meta
+          name="description"
+          content="Contact BerksAI for a free consultation. AI automation and consulting services in Berks County. Call (267) 357-8007 or email matthew.irving@berksai.com"
+        />
+        <link rel="canonical" href="https://berksai.com/contact" />
+        <meta property="og:title" content="Contact BerksAI | Free AI Consultation" />
+        <meta property="og:description" content="Contact BerksAI for a free consultation. AI automation and consulting services in Berks County." />
+        <meta property="og:url" content="https://berksai.com/contact" />
+      </Helmet>
       <div className="container">
-        <div className="contact-header">
-          <h1>Contact Us</h1>
-          <p>Ready to integrate AI into your business? Let's talk!</p>
-        </div>
-
         <div className="contact-content">
-          <div className="contact-info">
-            <h2>Get in Touch</h2>
-            <p>
-              We help local companies harness the power of AI to streamline operations, 
-              enhance customer experiences, and drive growth. Contact us to learn how 
-              BerksAI can transform your business.
-            </p>
-            
-            <div className="contact-details">
-              <div className="contact-item">
-                <h3>Services</h3>
-                <ul>
-                  <li>Intelligent Chatbots</li>
-                  <li>Email Automation Agents</li>
-                  <li>Workflow Automation</li>
-                  <li>AI Strategy & Implementation</li>
-                  <li>AI Training & Support</li>
-                  <li>Document Processing</li>
-                </ul>
-              </div>
-            </div>
+          <h1>Get In Touch</h1>
+          <p>
+            Interested in learning how automation could help your business? 
+            Fill out our contact form and we'll get back to you within 24 hours.
+          </p>
+          
+          <a 
+            href="https://forms.berksai.com/forms/QLA1OKsAhBwX5HWGyJap0"
+            className="cta-button-large"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Fill Out Contact Form → 
+          </a>
+          
+          <div className="alternative-contact">
+            <h3>Or reach out directly:</h3>
+            <p><strong>Email:</strong> matthew.irving@berksai.com</p>
+            <p><strong>Phone:</strong> (267) 357-8007</p>
+            <p><strong>Location:</strong> Oley, PA • Serving Berks County</p>
           </div>
-
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Name *</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="email">Email *</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="company">Company</label>
-              <input
-                type="text"
-                id="company"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Message *</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows="5"
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit" className="submit-btn">
-              Send Message
-            </button>
-          </form>
         </div>
       </div>
     </div>

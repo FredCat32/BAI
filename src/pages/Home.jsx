@@ -1,9 +1,22 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import './Home.css'
 
 function Home() {
   return (
     <div className="home-page">
+      <Helmet>
+        <title>BerksAI | AI Automation & Consulting for Pennsylvania Businesses</title>
+        <meta
+          name="description"
+          content="AI automation and consulting for Berks County businesses. Custom chatbots, workflow automation, and AI solutions. Based in Oley, PA serving Reading, King of Prussia, Philadelphia."
+        />
+        <link rel="canonical" href="https://berksai.com/" />
+        <meta property="og:title" content="BerksAI | AI Automation & Consulting for Pennsylvania Businesses" />
+        <meta property="og:description" content="AI automation and consulting for Berks County businesses. Custom chatbots, workflow automation, and AI solutions." />
+        <meta property="og:url" content="https://berksai.com/" />
+        <meta property="og:type" content="website" />
+      </Helmet>
         <section className="hero">
         <div className="container">
           <div className="hero-content">
