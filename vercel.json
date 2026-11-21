@@ -1,8 +1,23 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/blog/what-i-learned-helping-pennsylvania-businesses-implement-ai",
+      "destination": "/blog/what-small-businesses-should-know-before-starting-with-ai",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ai-tools-i-actually-use-every-day",
+      "destination": "/blog/how-to-choose-ai-tools-for-your-business",
+      "permanent": true
+    }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ],
   "headers": [
     {

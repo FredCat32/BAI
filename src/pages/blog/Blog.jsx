@@ -14,7 +14,7 @@ const blogPosts = [
     id: 'why-im-starting-an-ai-consulting-business-in-berks-county',
     title: 'Why I\'m Starting an AI Consulting Business in Berks County (And What I\'ve Learned So Far)',
     date: 'March 3, 2026',
-    excerpt: 'The honest story behind BerksAI: why I\'m building an AI automation consultancy, what I actually know (and don\'t), and why Pennsylvania businesses need practical AI guidance.',
+    excerpt: 'The honest story behind BerksAI: why I\'m building an AI training and consulting business, what I actually know (and don\'t), and why Pennsylvania businesses need practical AI guidance.',
     readTime: '7 min read'
   },
   {
@@ -25,17 +25,17 @@ const blogPosts = [
     readTime: '5 min read'
   },
   {
-    id: 'ai-tools-i-actually-use-every-day',
-    title: 'AI Tools I Actually Use Every Day (Personal Recommendations)',
+    id: 'how-to-choose-ai-tools-for-your-business',
+    title: 'How to Choose AI Tools for Your Business (Without Paying for Bloat)',
     date: 'February 24, 2026',
-    excerpt: 'An honest look at the AI tools I use daily to run my business—what they cost, how I use them, and whether they\'re worth it for Berks County businesses.',
-    readTime: '5 min read'
+    excerpt: 'A practical guide to choosing AI tools: start with the problem, know the main categories, ask the right questions about data and cost, and test before you commit.',
+    readTime: '6 min read'
   },
   {
-    id: 'what-i-learned-helping-pennsylvania-businesses-implement-ai',
-    title: 'What I Learned Helping Pennsylvania Businesses Implement AI',
+    id: 'what-small-businesses-should-know-before-starting-with-ai',
+    title: 'What Small Businesses Should Know Before Starting With AI',
     date: 'February 20, 2026',
-    excerpt: 'Real insights from working with local Berks County businesses—what actually works, what doesn\'t, and what you should know before spending a dime on AI.',
+    excerpt: 'Lessons from building AI systems, written for small business owners: start with problems not technology, what tends to work, what is overhyped, and how to measure whether it paid off.',
     readTime: '7 min read'
   },
   {

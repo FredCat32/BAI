@@ -8,7 +8,7 @@ function Post4() {
         <title>Why I'm Starting an AI Consulting Business in Berks County | BerksAI Blog</title>
         <meta
           name="description"
-          content="The honest story behind BerksAI: why I'm building an AI automation consultancy in Pennsylvania, what I've learned, and why local businesses need practical AI guidance."
+          content="The honest story behind BerksAI: why I'm building an AI training and consulting business in Pennsylvania, what I've learned, and why local businesses need practical AI guidance."
         />
         <link rel="canonical" href="https://berksai.com/blog/why-im-starting-an-ai-consulting-business-in-berks-county" />
         <meta property="og:title" content="Why I'm Starting an AI Consulting Business in Berks County" />
@@ -28,7 +28,7 @@ function Post4() {
 
       <div className="blog-post-content">
         <p>
-          I'm launching BerksAI, an AI automation consultancy focused on Pennsylvania businesses. This is the honest story of why I'm doing this, what I've learned building AI systems for years, and why I think local businesses need someone who can translate AI hype into practical solutions.
+          I'm launching BerksAI, an AI training and consulting business focused on Pennsylvania businesses. This is the honest story of why I'm doing this, what I've learned building AI systems for years, and why I think local businesses need someone who can translate AI hype into practical solutions.
         </p>
 
         <h2>The Gap I Keep Seeing</h2>

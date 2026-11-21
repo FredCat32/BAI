@@ -225,13 +225,13 @@ function Home() {
             <h2>From the blog</h2>
             <div className="featured-post">
               <h3>
-                <Link to="/blog/what-i-learned-helping-pennsylvania-businesses-implement-ai">
-                  What I Learned Helping Pennsylvania Businesses Implement AI
+                <Link to="/blog/what-small-businesses-should-know-before-starting-with-ai">
+                  What Small Businesses Should Know Before Starting With AI
                 </Link>
               </h3>
               <p>
-                What actually works, what doesn't, and what to know before spending
-                a dime on AI. Honest talk about costs, timelines, and ROI.
+                What tends to work, what's overhyped, and how to measure whether AI
+                actually paid off, before you spend anything.
               </p>
               <Link to="/blog" className="blog-link">
                 Read more articles &rarr;
