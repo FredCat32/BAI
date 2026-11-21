@@ -72,7 +72,8 @@ Avoid generic AI-site styling (gradient text, glows, emoji icons, dark blue/purp
 ### SEO
 - Per-page title, description, and canonical via `Helmet` in each page component.
 - Update `public/sitemap.xml` whenever a page or blog post is added.
-- `index.html` contains the Organization/ProfessionalService JSON-LD.
+- `index.html` contains the Organization/ProfessionalService JSON-LD. It must NOT contain a static canonical, meta description, or og:url: those would apply to every route in the raw HTML and make Google treat every page as a duplicate of the homepage. Per-page values come from Helmet only.
+- Hosting redirects one host to the other (check Vercel Domains). Sitemap, canonicals, schema, and robots all use `https://berksai.com` (no www), so Vercel must be set to serve the apex directly and redirect www to it.
 
 ## Chatbot (currently disabled)
 
