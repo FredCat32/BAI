@@ -27,7 +27,7 @@ This plan was written in March 2026. The business and site have changed since, s
 - #14 Logo converted to WebP
 
 **Still open**
-- #2 `og-image.jpg` (referenced in meta tags but the file does not exist)
+- ~~#2 `og-image.jpg`~~ done (see `design/og-image.svg`)
 - #8 Tech page is rewritten around the tools we train on, but still thin on word count
 - #9 Contact page expansion. The old form at `forms.berksai.com` died with the droplet; CTAs now go to `/contact` with email and phone buttons. Next step: add a hosted form (Web3Forms or Formspree) on that page.
 - #10, #11, #13, #15 Structured data (BlogPosting, Person, WebSite, BreadcrumbList)
