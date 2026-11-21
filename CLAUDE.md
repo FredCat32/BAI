@@ -67,7 +67,7 @@ Each page or component has a co-located CSS file. Theme variables live in `src/i
 Avoid generic AI-site styling (gradient text, glows, emoji icons, dark blue/purple themes).
 
 ### Public assets
-`public/` holds `logo.webp`/`logo.png`, `headshot.webp`/`.png`, `about-image.webp`/`.jpg`, `robots.txt`, and `sitemap.xml`. Use the WebP files in code and include `width`/`height` on images. `og-image.jpg` is referenced in some meta tags but does not exist yet.
+`public/` holds `logo.webp`/`logo.png`, `headshot.webp`/`.png`, `about-image.webp`/`.jpg`, `robots.txt`, and `sitemap.xml`. Use the WebP files in code and include `width`/`height` on images. `og-image.jpg` is referenced in some meta tags but does not exist yet. Favicons are a square red "B" mark (`favicon.svg` is the source; `favicon.ico`, `favicon-48.png`, `favicon-96.png`, `icon-192.png`, `icon-512.png`, and `apple-touch-icon.png` are generated from it). Do not use the wide `logo.png` as a favicon; Google needs a square icon.
 
 ### SEO
 - Per-page title, description, and canonical via `Helmet` in each page component.
