@@ -4,7 +4,7 @@ function BlogAuthor() {
   return (
     <div className="blog-post-author">
       <img
-        src="/headshot.webp"
+        src="/headshot-square.webp"
         alt="Matthew Irving"
         width="60"
         height="60"

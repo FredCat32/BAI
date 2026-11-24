@@ -53,9 +53,9 @@ function About() {
             <div className="founder-image">
               <img
                 src="/headshot.webp"
-                alt="Matthew Irving, founder of BerksAI"
-                width="1318"
-                height="1098"
+                alt="Matthew Irving, AI engineer and founder of BerksAI"
+                width="800"
+                height="1200"
                 loading="lazy"
                 className="founder-photo"
               />
