@@ -9,7 +9,7 @@ function About() {
         <title>About BerksAI | AI Trainer Matthew Irving | Oley, PA</title>
         <meta
           name="description"
-          content="Meet Matthew Irving, founder of BerksAI. On-site AI prompt training and consulting for Berks County businesses, with before-and-after measurement. Based in Oley, PA."
+          content="Meet Matthew Irving, AI engineer and founder of BerksAI. On-site AI prompt training and consulting for Berks County businesses, with before-and-after measurement. Based in Oley, PA."
         />
         <link rel="canonical" href="https://berksai.com/about" />
         <meta property="og:title" content="About BerksAI | AI Trainer Matthew Irving" />
@@ -28,9 +28,10 @@ function About() {
             <div className="founder-text">
               <h3>Background</h3>
               <p>
-                I'm a software developer who works with React, JavaScript, Python, C#, and
-                Langchain. I've spent years building AI systems, including chatbots, email
-                agents, and multi-step workflows.
+                I'm an AI engineer. I've built AI workflows and applications for the U.S. Navy
+                and the Marine Corps, and for pharmaceutical companies in the Philadelphia
+                area. I work with React, JavaScript, Python, C#, and Langchain, and my
+                projects have included chatbots, email agents, and multi-step workflows.
               </p>
               <p>
                 That background is why I focus on training and measurement. I know how
@@ -38,10 +39,10 @@ function About() {
                 use them well and check whether they're actually helping.
               </p>
               <p>
-                BerksAI is new. I don't have a portfolio of case studies yet, and I'd
-                rather say so than make one up. What I can offer is hands-on work, honest
-                advice, and a way to measure whether it paid off. You can read the longer
-                version in{' '}
+                BerksAI itself is new, so I don't have a portfolio of BerksAI client case
+                studies yet, and I'd rather say so than make one up. What I can offer is
+                hands-on work, honest advice, and a way to measure whether it paid off. You
+                can read the longer version in{' '}
                 <Link to="/blog/why-im-starting-an-ai-consulting-business-in-berks-county">
                   Why I'm Starting an AI Consulting Business in Berks County
                 </Link>
