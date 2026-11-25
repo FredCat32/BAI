@@ -7,3 +7,6 @@ dist/
 server/.env
 .env.local
 .env.production
+
+# Private marketing notes (prospect names, personal details). Never commit: repo is public.
+marketing/
