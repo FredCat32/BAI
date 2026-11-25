@@ -36,7 +36,7 @@ const WhenNotToUseAI = () => {
           It feels like everywhere you turn in Berks County and across Pennsylvania, someone's talking about how AI is going to revolutionize everything. I believe in this technology and I've built with it for years. But I also think the most useful thing I can do is tell you when to hold off.
         </p>
         <p>
-          BerksAI is new, so the situations below are hypotheticals meant to illustrate the principles, not stories about specific clients.
+          The situations below are illustrative examples, not stories about specific clients.
         </p>
 
         <h2>When your process isn't broken</h2>

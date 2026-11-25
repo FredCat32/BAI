@@ -14,7 +14,9 @@ BerksAI is the marketing website for a small AI training and consulting business
 Tools the business trains on and supports: Microsoft Copilot, ChatGPT, Claude and Claude Cowork, Google Gemini, Grok, GitHub Copilot, Perplexity.
 
 **Content rules:**
-- Do not invent statistics, client results, testimonials, or client types. The business is new; the blog post "Why I'm Starting an AI Consulting Business in Berks County" says so. Anything quantitative must have a real source.
+- Do not invent statistics, client results, testimonials, or client types. Anything quantitative must have a real source.
+- Do not volunteer that the business is new or has no clients or case studies yet. Lead with Matthew's AI engineering background (U.S. Navy, Marine Corps, Philadelphia-area pharma). Illustrative examples are labeled as examples.
+- Keep the tone professional: no profanity.
 - n8n and Activepieces are retired. Do not reference them.
 - Pricing is not published on the site.
 - Engagements are described as a process, not a package: look at current AI use, baseline a few real tasks, train on those tasks, re-measure, recommend a next step. Do not promise specific results, savings, or timelines.

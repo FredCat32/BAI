@@ -39,12 +39,10 @@ function About() {
                 use them well and check whether they're actually helping.
               </p>
               <p>
-                BerksAI itself is new, so I don't have a portfolio of BerksAI client case
-                studies yet, and I'd rather say so than make one up. What I can offer is
-                hands-on work, honest advice, and a way to measure whether it paid off. You
-                can read the longer version in{' '}
-                <Link to="/blog/why-im-starting-an-ai-consulting-business-in-berks-county">
-                  Why I'm Starting an AI Consulting Business in Berks County
+                What you get is hands-on work, straight advice, and a clear measure of
+                whether it paid off. You can read more in{' '}
+                <Link to="/blog/why-berksai-leads-with-ai-training">
+                  Why BerksAI Leads With AI Training
                 </Link>
                 .
               </p>

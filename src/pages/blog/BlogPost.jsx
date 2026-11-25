@@ -11,7 +11,7 @@ const posts = {
   '5-ways-pennsylvania-businesses-can-use-ai': Post1,
   'what-small-businesses-should-know-before-starting-with-ai': Post2,
   'how-to-choose-ai-tools-for-your-business': Post3,
-  'why-im-starting-an-ai-consulting-business-in-berks-county': Post4,
+  'why-berksai-leads-with-ai-training': Post4,
   'enabling-ai-use-inside-your-company': Post5,
   'when-not-to-use-ai': WhenNotToUseAI
 }

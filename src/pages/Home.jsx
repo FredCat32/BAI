@@ -284,7 +284,7 @@ function Home() {
             <div className="faq-item">
               <h3>How do I get started?</h3>
               <p>
-                Call 267-357-8007 or use the contact form to book a free consultation.
+                Call 267-357-8007 or email us to book a free consultation.
                 We'll talk through your situation and outline next steps. No
                 commitment required.
               </p>

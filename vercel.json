@@ -3,6 +3,11 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/blog/why-im-starting-an-ai-consulting-business-in-berks-county",
+      "destination": "/blog/why-berksai-leads-with-ai-training",
+      "permanent": true
+    },
+    {
       "source": "/blog/what-i-learned-helping-pennsylvania-businesses-implement-ai",
       "destination": "/blog/what-small-businesses-should-know-before-starting-with-ai",
       "permanent": true

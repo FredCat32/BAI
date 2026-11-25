@@ -73,7 +73,6 @@ I'm sticking to published research and linking every source at the end. Two are 
           <li>These are experiments on specific tasks, and one large rollout at a single company. Your results will depend on your work.</li>
           <li>Several used earlier models than what's available now. Tools change quickly.</li>
           <li>Most measure speed and graded quality on bounded tasks, not long-term business outcomes like revenue.</li>
-          <li>I don't have client results to add yet. BerksAI is new, and I'd rather say that than invent some.</li>
         </ul>
 
         <h2>Your employees are probably already using AI</h2>

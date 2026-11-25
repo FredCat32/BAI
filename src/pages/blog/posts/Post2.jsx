@@ -37,8 +37,8 @@ function Post2() {
         <p>
           Small business owners are busy running their companies. They don't have time for buzzwords or
           for solutions that sound impressive but don't save time or money. So here's what I think
-          matters before you spend anything on AI. BerksAI is new, so this comes from building these
-          systems and from the published research, not from a long list of local case studies.
+          matters before you spend anything on AI, drawn from building these systems and from the
+          published research.
         </p>
 
         <h2>The biggest mistake: starting with "AI" instead of problems</h2>

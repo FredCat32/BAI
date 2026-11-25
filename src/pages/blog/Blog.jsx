@@ -11,11 +11,11 @@ const blogPosts = [
     readTime: '8 min read'
   },
   {
-    id: 'why-im-starting-an-ai-consulting-business-in-berks-county',
-    title: 'Why I\'m Starting an AI Consulting Business in Berks County (And What I\'ve Learned So Far)',
+    id: 'why-berksai-leads-with-ai-training',
+    title: 'Why BerksAI Leads With AI Training',
     date: 'March 3, 2026',
-    excerpt: 'The honest story behind BerksAI: why I\'m building an AI training and consulting business, what I actually know (and don\'t), and why Pennsylvania businesses need practical AI guidance.',
-    readTime: '7 min read'
+    excerpt: 'Most businesses already pay for AI tools and get little out of them. Why I start with on-site training on your real work, measure the result, and build only when it pays off.',
+    readTime: '5 min read'
   },
   {
     id: 'when-not-to-use-ai',
