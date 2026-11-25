@@ -36,7 +36,7 @@ The chatbot backend scripts (`npm run dev:server`, `npm run dev:all`) still exis
 
 - Hosted on **Vercel**. The `berksai.com` and `www.berksai.com` domains are attached to the Vercel project; DNS is managed at Namecheap.
 - Pushing to `main` on GitHub (`FredCat32/BAI`) triggers a production deploy automatically.
-- `vercel.json` sets `cleanUrls`, rewrites unknown routes to `/spa.html`, holds permanent redirects for retitled blog posts, and sets long-term cache headers for `/assets/*`.
+- `vercel.json` sets `cleanUrls`, holds permanent redirects for retitled blog posts, and sets long-term cache headers for `/assets/*`.
 - The old DigitalOcean droplet is gone. `deploy.sh`, `server-setup.sh`, and `nginx-config.conf` are legacy and unused.
 - Email is Google Workspace (@berksai.com). Do not remove the MX, SPF, DKIM, DMARC, SendGrid, or Google verification DNS records.
 
@@ -55,7 +55,7 @@ React 18 single-page app, Vite 4, React Router 6, `react-helmet-async` for per-p
 - `/ai-training-reading-pa`, `/ai-training-lancaster-pa`, `/ai-training-kutztown-pa` Service-area pages, one shared component (`src/pages/locations/LocationPage.jsx`) fed by `src/pages/locations/locations.js`. Each location needs genuinely local copy; never clone a page and swap the town name (doorway-page penalty).
 
 ### Prerendering
-`npm run build` builds the client, then an SSR bundle of `src/entry-server.jsx`, then runs `scripts/prerender.mjs`, which renders every route to static HTML with its Helmet title, meta, and canonical. Output follows Vercel `cleanUrls` (`/about` is served from `dist/about.html`); `dist/spa.html` is the empty shell used as the fallback rewrite for unknown routes. `src/main.jsx` hydrates prerendered HTML. The route list lives in `entry-server.jsx` and picks up blog posts and locations automatically; any other new top-level page must be added there. Avoid touching `window`/`document` during render, since pages render in Node at build time.
+`npm run build` builds the client, then an SSR bundle of `src/entry-server.jsx`, then runs `scripts/prerender.mjs`, which renders every route to static HTML with its Helmet title, meta, and canonical. Output follows Vercel `cleanUrls` (`/about` is served from `dist/about.html`); `dist/404.html` is the prerendered not-found page, which Vercel serves with a 404 status for unknown paths. `src/main.jsx` hydrates prerendered HTML. The route list lives in `entry-server.jsx` and picks up blog posts and locations automatically; any other new top-level page must be added there. Avoid touching `window`/`document` during render, since pages render in Node at build time.
 
 ### Components
 - `src/components/Header.jsx` responsive header and nav

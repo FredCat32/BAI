@@ -7,6 +7,7 @@ import Tech from './pages/Tech'
 import Blog from './pages/blog/Blog'
 import BlogPost from './pages/blog/BlogPost'
 import LocationPage from './pages/locations/LocationPage'
+import NotFound from './pages/NotFound'
 import locations from './pages/locations/locations'
 import './App.css'
 
@@ -31,6 +32,7 @@ function App() {
               element={<LocationPage location={location} />}
             />
           ))}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </div>
