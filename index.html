@@ -12,11 +12,12 @@
 
     <!--
       Per-page title, description, and canonical are set by react-helmet-async
-      in each page component. Do NOT add a static canonical or meta description
+      in each page component and written into each page's HTML at build time
+      by scripts/prerender.mjs. Do NOT add a static canonical or meta description
       here: it would apply to every route in the raw HTML and tell Google that
       every page is a duplicate of the homepage.
     -->
-    <title>BerksAI | On-Site AI Prompt Training & Consulting | Berks County, PA</title>
+    <title>BerksAI | AI Training & Consulting in Reading and Berks County, PA</title>
     <meta name="author" content="BerksAI" />
 
     <!-- Open Graph / Facebook (generic defaults for crawlers that do not run JavaScript) -->
@@ -51,7 +52,7 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "BerksAI",
-      "description": "On-site AI prompt training and consulting for Berks County, King of Prussia, Philadelphia and Eastern Pennsylvania businesses.",
+      "description": "On-site AI prompt training and consulting for businesses in Reading, Berks County, Lancaster, King of Prussia, Philadelphia, and Eastern Pennsylvania.",
       "url": "https://berksai.com",
       "telephone": "+1-267-357-8007",
       "address": {
@@ -61,8 +62,13 @@
         "addressCountry": "US"
       },
       "areaServed": [
-        { "@type": "City", "name": "Reading" },
-        { "@type": "AdministrativeArea", "name": "Berks County" },
+        { "@type": "City", "name": "Reading, PA" },
+        { "@type": "City", "name": "Wyomissing, PA" },
+        { "@type": "City", "name": "West Reading, PA" },
+        { "@type": "City", "name": "Kutztown, PA" },
+        { "@type": "City", "name": "Oley, PA" },
+        { "@type": "AdministrativeArea", "name": "Berks County, PA" },
+        { "@type": "City", "name": "Lancaster, PA" },
         { "@type": "City", "name": "King of Prussia" },
         { "@type": "AdministrativeArea", "name": "Montgomery County" },
         { "@type": "City", "name": "Philadelphia" },

@@ -10,3 +10,4 @@ server/.env
 
 # Private marketing notes (prospect names, personal details). Never commit: repo is public.
 marketing/
+dist-ssr/

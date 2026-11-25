@@ -1,0 +1,121 @@
+.location-page {
+  min-height: calc(100vh - 80px);
+}
+
+.location-hero {
+  padding: 90px 0 80px;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.location-hero .container {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.location-hero h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: var(--color-ink);
+}
+
+.location-lede {
+  font-size: 1.2rem;
+  line-height: 1.65;
+  color: var(--color-muted);
+  margin-bottom: 36px;
+}
+
+.location-section {
+  padding: 64px 0;
+  background-color: var(--color-bg);
+}
+
+.location-alt {
+  background-color: var(--color-bg-alt);
+}
+
+.location-narrow {
+  max-width: 820px;
+}
+
+.location-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--color-ink);
+}
+
+.location-section p {
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.location-section a {
+  color: var(--color-accent);
+}
+
+.location-list div {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.location-list dt {
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 4px;
+}
+
+.location-list dd {
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.location-steps {
+  padding-left: 22px;
+  margin-bottom: 20px;
+}
+
+.location-steps li {
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.location-steps strong {
+  color: var(--color-ink);
+}
+
+.location-faq {
+  margin-bottom: 24px;
+}
+
+.location-faq h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--color-ink);
+}
+
+.location-others {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .location-hero {
+    padding: 56px 0 48px;
+  }
+
+  .location-hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .location-section {
+    padding: 44px 0;
+  }
+
+  .location-section h2 {
+    font-size: 1.6rem;
+  }
+}

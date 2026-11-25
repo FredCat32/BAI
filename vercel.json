@@ -21,7 +21,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/spa.html"
     }
   ],
   "headers": [
@@ -34,5 +34,6 @@
         }
       ]
     }
-  ]
+  ],
+  "cleanUrls": true
 }

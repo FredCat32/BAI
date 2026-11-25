@@ -36,7 +36,7 @@ The chatbot backend scripts (`npm run dev:server`, `npm run dev:all`) still exis
 
 - Hosted on **Vercel**. The `berksai.com` and `www.berksai.com` domains are attached to the Vercel project; DNS is managed at Namecheap.
 - Pushing to `main` on GitHub (`FredCat32/BAI`) triggers a production deploy automatically.
-- `vercel.json` provides the SPA rewrite (all routes to `index.html`) and long-term cache headers for `/assets/*`.
+- `vercel.json` sets `cleanUrls`, rewrites unknown routes to `/spa.html`, holds permanent redirects for retitled blog posts, and sets long-term cache headers for `/assets/*`.
 - The old DigitalOcean droplet is gone. `deploy.sh`, `server-setup.sh`, and `nginx-config.conf` are legacy and unused.
 - Email is Google Workspace (@berksai.com). Do not remove the MX, SPF, DKIM, DMARC, SendGrid, or Google verification DNS records.
 
@@ -52,6 +52,10 @@ React 18 single-page app, Vite 4, React Router 6, `react-helmet-async` for per-p
 - `/tech` Tools we train on and support
 - `/contact` Contact (email and phone buttons; all "book a consultation" CTAs link here. A hosted form is planned, see ACTION-PLAN.md)
 - `/blog` and `/blog/:postId` Blog index and posts (post components live in `src/pages/blog/posts/`)
+- `/ai-training-reading-pa`, `/ai-training-lancaster-pa`, `/ai-training-kutztown-pa` Service-area pages, one shared component (`src/pages/locations/LocationPage.jsx`) fed by `src/pages/locations/locations.js`. Each location needs genuinely local copy; never clone a page and swap the town name (doorway-page penalty).
+
+### Prerendering
+`npm run build` builds the client, then an SSR bundle of `src/entry-server.jsx`, then runs `scripts/prerender.mjs`, which renders every route to static HTML with its Helmet title, meta, and canonical. Output follows Vercel `cleanUrls` (`/about` is served from `dist/about.html`); `dist/spa.html` is the empty shell used as the fallback rewrite for unknown routes. `src/main.jsx` hydrates prerendered HTML. The route list lives in `entry-server.jsx` and picks up blog posts and locations automatically; any other new top-level page must be added there. Avoid touching `window`/`document` during render, since pages render in Node at build time.
 
 ### Components
 - `src/components/Header.jsx` responsive header and nav
@@ -72,7 +76,7 @@ Avoid generic AI-site styling (gradient text, glows, emoji icons, dark blue/purp
 `public/` holds `logo.webp`/`logo.png`, `headshot.webp` (800x1200 portrait, About page) and `headshot-square.webp` (240x240 face crop, blog author box), `about-image.webp`/`.jpg`, `robots.txt`, and `sitemap.xml`. Use the WebP files in code and include `width`/`height` on images. `og-image.jpg` (1200x630, used for social previews) is generated from `design/og-image.svg`: render the SVG centered on a square canvas with `qlmanage`, center-crop to 1200x630 with `sips`, and export as JPEG. Favicons are a square red "B" mark (`favicon.svg` is the source; `favicon.ico`, `favicon-48.png`, `favicon-96.png`, `icon-192.png`, `icon-512.png`, and `apple-touch-icon.png` are generated from it). Do not use the wide `logo.png` as a favicon; Google needs a square icon.
 
 ### SEO
-- Per-page title, description, and canonical via `Helmet` in each page component.
+- Per-page title, description, and canonical via `Helmet` in each page component; prerendering writes them into each page's static HTML.
 - Update `public/sitemap.xml` whenever a page or blog post is added.
 - `index.html` contains the Organization/ProfessionalService JSON-LD. It must NOT contain a static canonical, meta description, or og:url: those would apply to every route in the raw HTML and make Google treat every page as a duplicate of the homepage. Per-page values come from Helmet only.
 - Hosting redirects one host to the other (check Vercel Domains). Sitemap, canonicals, schema, and robots all use `https://berksai.com` (no www), so Vercel must be set to serve the apex directly and redirect www to it.

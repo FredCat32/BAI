@@ -6,13 +6,13 @@ function Home() {
   return (
     <div className="home-page">
       <Helmet>
-        <title>BerksAI | On-Site AI Prompt Training & Consulting in Berks County, PA</title>
+        <title>BerksAI | AI Training & Consulting in Reading and Berks County, PA</title>
         <meta
           name="description"
-          content="On-site AI prompt training focused on ROI, plus AI strategy, machine learning, and automation for Pennsylvania businesses. Based in Oley, PA."
+          content="On-site AI prompt training and consulting for businesses in Reading, Berks County, Lancaster, and Eastern PA. Copilot, ChatGPT, Claude, and Gemini, measured before and after."
         />
         <link rel="canonical" href="https://berksai.com/" />
-        <meta property="og:title" content="BerksAI | On-Site AI Prompt Training & Consulting in Berks County, PA" />
+        <meta property="og:title" content="BerksAI | AI Training & Consulting in Reading and Berks County, PA" />
         <meta property="og:description" content="On-site AI prompt training focused on ROI. Microsoft Copilot, ChatGPT, Claude, Gemini, and more." />
         <meta property="og:url" content="https://berksai.com/" />
         <meta property="og:type" content="website" />
@@ -20,13 +20,14 @@ function Home() {
 
       <section className="hero">
         <div className="container hero-inner">
-          <p className="eyebrow">Oley, PA &middot; Serving Berks County and Eastern Pennsylvania</p>
+          <p className="eyebrow">AI training &amp; consulting &middot; Reading, Berks County &amp; Eastern PA</p>
           <h1>Protect your AI investment.</h1>
           <p className="hero-subtitle">
             Most businesses are already paying for AI tools. Whether that spend pays off
-            depends on how well your team uses them. We come to your office and train
-            your people to get reliable, repeatable results, then help you decide where
-            else AI is worth the money.
+            depends on how well your team uses them. We come to your office in Reading,
+            across Berks County, and throughout Eastern Pennsylvania, train your people to
+            get reliable, repeatable results, then help you decide where else AI is worth
+            the money.
           </p>
           <div className="hero-actions">
             <Link to="/contact" className="cta-button">
@@ -248,10 +249,14 @@ function Home() {
             <div className="faq-item">
               <h3>What areas does BerksAI serve?</h3>
               <p>
-                We're based in Oley, PA and serve Berks County (Reading, Wyomissing,
-                Oley), Montgomery County (King of Prussia, Norristown), Philadelphia
-                and the Main Line, as well as Lancaster, Lehigh, Chester, and Delaware
-                counties. We also work remotely.
+                We're based in Oley, PA and serve{' '}
+                <Link to="/ai-training-reading-pa">Reading</Link> and all of Berks County,
+                including Wyomissing, West Reading, and{' '}
+                <Link to="/ai-training-kutztown-pa">Kutztown</Link>;{' '}
+                <Link to="/ai-training-lancaster-pa">Lancaster</Link> and Lancaster
+                County; Montgomery County (King of Prussia, Norristown); Philadelphia and
+                the Main Line; and Lehigh, Chester, and Delaware counties. We also work
+                remotely.
               </p>
             </div>
 

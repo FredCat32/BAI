@@ -7,7 +7,7 @@ import Post4 from './posts/Post4'
 import Post5 from './posts/Post5'
 import WhenNotToUseAI from './posts/when-not-to-use-ai'
 
-const posts = {
+export const posts = {
   '5-ways-pennsylvania-businesses-can-use-ai': Post1,
   'what-small-businesses-should-know-before-starting-with-ai': Post2,
   'how-to-choose-ai-tools-for-your-business': Post3,
