@@ -31,7 +31,9 @@ function Post4() {
         <p>
           I'm an AI engineer. I've built AI workflows and applications for the U.S. Navy, the Marine
           Corps, and pharmaceutical companies in the Philadelphia area: chatbots, email agents,
-          document processing, and multi-step workflows. I started BerksAI to bring that experience to
+          document processing, and multi-step workflows. I hold a master's in computer science focused
+          on AI and machine learning, and before that I built and trained people on production-floor
+          software at Reading Truck. I started BerksAI to bring that experience to
           businesses in Berks County and Eastern Pennsylvania. Here's why the first thing I offer is
           training, not software.
         </p>

@@ -28,10 +28,16 @@ function About() {
             <div className="founder-text">
               <h3>Background</h3>
               <p>
-                I'm an AI engineer. I've built AI workflows and applications for the U.S. Navy
-                and the Marine Corps, and for pharmaceutical companies in the Philadelphia
-                area. I work with React, JavaScript, Python, C#, and Langchain, and my
-                projects have included chatbots, email agents, and multi-step workflows.
+                I'm an AI engineer with a master's in computer science focused on AI and
+                machine learning, and I'm an AWS Certified Machine Learning Engineer. I've
+                built AI workflows and applications for the U.S. Navy and the Marine Corps,
+                and for pharmaceutical companies in the Philadelphia area, including AI
+                agents, document extraction, and multi-step workflows.
+              </p>
+              <p>
+                Before that, I was a developer and systems analyst at Reading Truck, building
+                software for the production floor and training the people who used it. My
+                undergraduate degree is in biology, with a minor in business.
               </p>
               <p>
                 That background is why I focus on training and measurement. I know how

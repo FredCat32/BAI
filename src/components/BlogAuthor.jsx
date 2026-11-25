@@ -19,7 +19,7 @@ function BlogAuthor() {
           Founder & AI Consultant at BerksAI
         </p>
         <p className="author-bio">
-          Expert in React, Python, and AI automation for Berks County businesses. Based in Oley, PA.
+          AI engineer (M.S. Computer Science, AI/ML; AWS Certified Machine Learning Engineer). Has built AI systems for the U.S. Navy, the Marine Corps, and pharmaceutical companies. Based in Oley, PA.
         </p>
       </div>
     </div>
